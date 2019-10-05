@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>CIT 261 | Topic 1</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="../css/FluencyCSS.css" type="text/css" />
+	</head>
+	<body>
+<!-- DROPMENU -->
+		<header>
+			<div class="row">
+				<div class="columnnav">
+					<div class="dropdown">
+					<button class="dropbtn">Menu</button>
+						<div class="dropdown-content">
+							<a href="../index.html">Home</a>
+							<a href="topic1.html">Topic 1</a>
+							<a href="topic2.html">Topic 2</a>
+							<a href="topic3.html">Topic 3</a>
+							<a href="topic3.html">Topic 4</a>
+							<a href="topic3.html">Topic 5</a>
+							<a href="topic3.html">Topic 6</a>
+							<a href="topic3.html">Topic 7</a>
+							<a href="topic3.html">Topic 8</a>
+							<a href="topic3.html">Topic 9</a>
+							<a href="topic3.html">Topic 10</a>
+							<a href="topic3.html">Topic 11</a>
+							<a href="topic3.html">Topic 12</a>
+							<a href="topic3.html">Topic 13</a>
+						</div>
+					</div>
+				</div>
+				<div class="columnnav">
+					<h1>Topic 1 - <i>JavaScript</i></h1>
+				</div>
+			</div>
+		</header>
+		
+<!-- DEFINITIONS -->
+		<main>
+			<div>
+				<h3>INDEX</h3>
+				<ol>
+					<li><a href="#ONE">Loops</a></li>
+					<li><a href="#TWO">Conditional Statements</a></li>
+					<li><a href="#THREE">Functions</a></li>
+					<li><a href="#FOUR">Variables</a></li>
+					<li><a href="#FIVE">Parameters</a></li>
+					<li><a href="#SIX">Arrays</a></li>
+					<li><a href="#SEVEN">Associative Arrays</a></li>
+				</ol>
+			</div>
+			<hr>
+<!-- TOPICS -->
+<!-- #1 LOOPS -->
+			<table><a id="ONE"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">1</td>
+					<tr>
+						<td class="TDdef" colspan="2"><b><i>Loops</i></b> : Repeatedly runs a block of code, until a specific condition is met. Uses <b>for</b>, <b>for/in</b>, <b>while</b> and <b>do/while</b>. Loops are considered the most basic of JS applications.<hr class="red"></td>
+						<td class="TDcode" rowspan="3">function loopFun() {<br>
+														var x = 0;<br>
+														while(x < 4) {<br>
+															var showLoop = document.getElementById('loopID');<br>
+															showLoop.innerHTML += "Loop " + x + "." + "<br>";<br>
+															i++;<br>
+														}<br>
+														document.getElementById("buttonLoopID").style = "showLoop:none;";<br>
+														}</td>
+					</tr>
+					<tr>
+						<td class="TDjs"><div id="loopID"><button id="buttonID1" onclick="function1()">4 Loops</button></div></td>
+						<td>This loop has a limit of 4, then terminates. It uses the "while" tag, indicating that while x < 4, it will continue running the function.<br>To ensure that the function does not repeat, the button is disabled once finished. Since JS considers "0" as the first number, so counts it as #1.</td>
+					</tr>
+				</tr>
+				</tbody>
+			</table><hr>
+
+<!-- #2 CONDITIONAL STATEMENTS -->
+			<table><a id="TWO"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">2</td>
+					<tr>
+						<td class="TDdef" colspan="2"><b><i>Conditional Statements</i></b> : Executes a block of code if a specified condition is true, or another if false. Also known as <b>If/Else</b> statements.<br>(Similar to "boolean" assignments, which view results as True/False)<hr class="red"></td>
+						<td class="TDcode" rowspan="3">function function2()<br> {
+														var response;<br>
+														var user = prompt("What's your name?");<br>
+														if (confirm && user == "") {
+															response = "Come on, you've gotta have a name.";
+														}
+														else if (user == "asdf" || user == 123) {<br>
+															response = "Dude, '" + user + "' is not a name.";<br>
+														}<br>
+														else if (user == "Yoda") {<br>
+															response = "Mmmm, Jedi master, you are.";<br>
+														} <br>
+														else if (user == null || user == "") {<br>
+															response = "Well fine then...";<br>
+														} <br>
+														else {<br>
+															response = "Hello " + user + "!";<br>
+														}<br>
+														document.getElementById("p2ID").innerHTML = response;
+														}<br></td>
+					</tr>
+					<tr>
+						<td class="TDjs"><button onclick="function2()">Who're you?</button><p id="pID2"></p></td>
+						<td>Clicking the button will invite a prompt, where you can give a response. If something is typed in, then you will a proper greeting... unless you put in something specific.<br>Also, if you don't put anything in, the program will respond appropriately.</td>
+					</tr>
+				</tr>
+				</tbody>
+			</table><hr>
+				
+<!-- #3 FUNCTIONS -->			
+			<table><a id="THREE"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">3</td>
+					<tr>
+						<td class="TDdef" colspan="2"><b><i>Functions</a></i></b> : A block of code designed to perform a particular task when called upon, identified with <b>()</b>.<hr class="red"></td>
+						<td class="TDcode" rowspan="3">//Range of numbers to pick from<br>
+														var pick = {<br>
+															range: 1000,<br>
+															roll: function () {<br>
+																var randomNumber = Math.floor(Math.random() * this.range) + 1;<br>
+																return randomNumber;<br>
+																}<br>
+														}<br>
+														//Shows the number generated<br>
+														function showNumber(number) {<br>
+															var numberResult = document.getElementById('numberResult');<br>
+															numberResult.innerHTML = number;<br>
+														}<br>
+														//Clickable button<br>
+														var button = document.getElementById('button3');<br>
+														//Clicking button runs "function()"<br>
+														button.onclick = function() {<br>
+															var result = pick.roll();<br>
+															showNumber(result);<br>
+														}</td>
+					</tr>
+					<tr>
+						<td class="TDjs"><button id="button3">Random Number Gen<br>( 1 - 1000 )</button><p id="numberResult"></p></td>
+						<td>Clicking the button repeatedly will give a randomly chosen number, based on the range given inside the JS code.<br>The button does not disappear once clicked, making this function a repeatable one that replaces each number with a new one.</td>
+					</tr>
+				</tr>
+				</tbody>
+			</table><hr>
+			
+<!-- #4 VARIABLES -->
+			<table><a id="FOUR"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">4</td>
+					<tr>
+						<td class="TDdef" colspan="2"><b><i>Variables</i></b> : A storage location of information, unique to task. Declared by using <b>var =</b>.<hr class="red"></td>
+						<td class="TDcode" rowspan="3">// var a = 5;<br>// var b = "Five";</td>
+					</tr>
+					<tr>
+						<td class="TDjs">var a = 5;<br>var b = "Five";</td>
+						<td>The variables here, a and b, both show how properties can be assigned as numbers or as strings. If numbers, then they do not require quotations. If written words, or strings, then they must be covered with double-quotations.</td>
+					</tr>
+				</tr>
+				</tbody>
+			</table><hr>
+			
+<!-- #5 PARAMETERS -->
+			<table><a id="FIVE"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">5</td>
+					<tr>
+						<td class="TDdef" colspan="2"><b><i>Parameters</i></b> : Names listed in the function definition. Functions have () at the end of their name, but variables can be placed inside to define which ones are affected.<hr class="red"></td>
+						<td class="TDcode" rowspan="3">function theAnswer() {<br>
+														function function5(x, y) { <br>
+															return x + y;<br>
+														}<br>
+														document.getElementById("pID5").innerHTML = function5(40, 2); <br>
+														document.getElementById("buttonID5").style = "display:none;";<br>
+													}</td>
+					</tr>
+					<tr>
+						<td class="TDjs"><button onclick="theAnswer()" id="buttonID5">The Answer to Life, the Universe and Everything</button><br><p id="pID5"></p></td>
+						<td>The function name contains the variables x and y, which are defined within the function itself. When the button is clicked, it adds them together. </td>
+					</tr>
+				</tr>
+				</tbody>
+			</table><hr>
+			
+<!-- #6 ARRAYS -->
+			<table><a id="SIX"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">6</td>
+					<tr>
+						<td class="TDdef" colspan="2"><b><i>Arrays</i></b> : A line of data, separated by commas, identified by <b>[]</b>.<hr class="red"></td>
+						<td class="TDcode" rowspan="3">function array() {<br>
+															var bestThings = ["Sneks", "Chips", "Hot Sauce"];<br>
+															document.getElementById("pID6").innerHTML = bestThings; <br>
+															document.getElementById("buttonID6").style = "display:none;";<br>
+														}</td>
+					</tr>
+					<tr>
+						<td class="TDjs"><button onclick="array()" id="buttonID6">Best Things Ever</button><p id="pID6"></p></td>
+						<td>A variable is given an array of items within a [], and is summoned by clicking the button.</td>
+					</tr>
+				</tr>
+				</tbody>
+			</table><hr>
+			
+<!-- #7 ASSOCIATIVE ARRAYS -->
+			<table><a id="SEVEN"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">7</td>
+					<tr>
+						<td class="TDdef" colspan="2"><b><i>Associative Arrays</i></b> : Arrays that the user can redefine as needed. Combinations incluse shift, unshift, pop and push.<hr></td>
+						<td class="TDcode" rowspan="3">var foodPop = ["Chips", " Salsa", " Nachos", " Cake", " Cookies", " Chocolate"];<br>
+														document.getElementById("pID7a").innerHTML = foodPop;<br>
+														function arrayAssA() {<br>
+															foodPop.pop();<br>
+															document.getElementById("pID7a").innerHTML = foodPop;<br>
+															if (foodPop.length < 1 || foodPop == undefined) {<br>
+																document.getElementById("pID7a").innerHTML = "All gone.";<br>
+															}<br>
+														}<br>
+														var foodShift = ["Chips", " Salsa", " Nachos", " Cake", " Cookies", " Chocolate"];<br>
+														document.getElementById("pID7b").innerHTML = foodShift;<br>
+														function arrayAssB() {<br>
+															foodShift.shift();<br>
+															document.getElementById("pID7b").innerHTML = foodShift;<br>
+															if (foodShift.length < 1 || foodShift == undefined) {<br>
+																document.getElementById("pID7b").innerHTML = "All gone.";<br>
+															}<br>
+														}</td>
+					</tr>
+					<tr>
+						<td class="TDjs"><button onclick="arrayAssA()" id="buttonID7a">Eat!</button><p id="pID7a"></p><br><button onclick="arrayAssB()" id="buttonID7b">Eat!</button><p id="pID7b"></p></td>
+						<td>Clicking the button removes the last item on the array, using the ".pop" addition, until all of the items are gone.</td>
+					</tr>
+				</tr>
+				</tbody>
+			</table><hr class="red">
+		</main>
+<!--          END OF THE LINE          -->
+	<footer>
+        <p>&copy;2019 David Olsen - CIT261, <a href="http://www.byui.edu/online">BYU-Idaho Online</a></p>
+	</footer>
+		<script src="../css/dropmenu.js"></script>
+		<script src="topic1js.js"></script>
+	</body>
+</html>

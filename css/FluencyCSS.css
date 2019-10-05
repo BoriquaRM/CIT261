@@ -1,0 +1,107 @@
+/* This is the CSS for my GitHub Fluency Page for CIT261 */
+/* David Olsen */
+/* It goes without saying, but this is how you add comments in CSS */
+
+/* General Rules */
+html {
+	padding: 10px;
+	background-color: #BDBDBD; }
+header, main, footer {
+	background-color: #ffffff;
+	border: inset #c0220b;
+	margin: 10px 80px 10px 80px; }
+header, footer {
+	text-align: center; }
+main {
+	font-size: 1.5em;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 30px; }
+main h1, main h2, main h3 {
+	font-family: Agency FB, serif;
+	text-align: center; 
+	margin: 0px; }
+p, ul, ol, a, td, button, .jsscript {
+	font-family: Agency FB, serif; }
+button {
+	border-radius: 5px 5px 5px 5px; }
+button:hover {
+	box-shadow: 0px 0px 2px 2px #ccc; }
+.column, .columnnav, .jsscript {
+	font-size: 1em;
+	float: left;
+	padding: 0px 20px 0px 20px;
+	height: auto; 
+	box-sizing: border-box;
+	display: inline-block;
+	width: auto;
+	overflow: visible;	}
+.row:after {
+	content: "";
+	display: table;
+	clear: both; }
+li a, i { color: red; }
+td { padding: 10px; }
+.TDnumber {
+	padding: 20px;
+	font-size: 2.5em; }
+.TDdef {
+	width: 100%;
+}
+.TDjs {
+	min-width: 160px;
+	max-width: 200px;
+	border: solid 2px black;
+	text-align: left; }
+.TDjs p {
+	text-align: center; }
+.TDcode {
+	text-align: left; 
+	font-size: .3em; 
+	border: solid 2px black; 
+	font-family: Verdana, Geneva, sans-serif; 
+	min-width: 100px; }
+hr.red {
+  border-top: 1px solid blue;
+}
+
+
+
+/* GRID Layout and Container Info */
+.itemL { grid-area: left; text-align: center; width: 50px;}
+.itemM { grid-area: mid; max-width: 150px}
+.itemR { grid-area: right; }
+.itemJS {grid-area: js; text-align: left; font-size: .5em; border: solid 2px black; padding: 3px; font-family: Verdana, Geneva, sans-serif; }
+.grid-container { display: grid; grid-template-areas: 'left mid right js';	grid-gap: 10px;	padding: 10px; }
+.grid-container > div {	 }
+
+
+
+
+
+
+
+/* Topic 1 */
+.jsscript {
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+	max-width: 140px;
+	max-height: auto;
+	border: solid 2px black; }
+
+
+
+
+
+
+
+
+
+/* DROPMENU */
+.dropbtn { color: white; padding: 26px; font-size: 25px;	border: none; background-color: #7C7C7C; border-radius: 0px;}
+.dropdown {	position: relative;	display: inline-block; }
+.dropdown-content {	display: none; position: absolute; background-color: #304776; }
+.dropdown-content a { width: max-content; color: white; padding: 12px 27px;	display: block; }
+.dropdown-content a:hover {	background-color: green; width: 100%; box-shadow: 0px 0px 3px grey;}
+.dropdown:hover .dropdown-content {	display: block; }
+.dropdown:hover .dropbtn { background-color: #ffffff; color: #5ca4d3; }
