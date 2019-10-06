@@ -29,7 +29,7 @@ button {
 	padding: inherit;
 	display: flex;
 	align-items: center;
-	justify-content: center;	}
+	justify-content: center; }
 button:hover {
 	box-shadow: 0px 0px 2px 2px #ccc; }
 .column, .columnnav {
@@ -40,7 +40,7 @@ button:hover {
 	box-sizing: border-box;
 	display: inline-block;
 	width: auto;
-	overflow: visible;	}
+	overflow: visible; }
 .row:after {
 	content: "";
 	display: table;
@@ -50,10 +50,10 @@ li { font-size: .9em; }
 td { padding: 10px; }
 .TDnumber {
 	padding: 20px;
-	font-size: 2.5em; }
+	font-size: 2.5em; 
+	width: 50px;}
 .TDdef {
-	width: 100%;
-}
+	width: 100%; }
 .TDjs {
 	min-width: 160px;
 	max-width: 200px;
@@ -66,10 +66,28 @@ td { padding: 10px; }
 	border: solid 2px black; 
 	font-family: Verdana, Geneva, sans-serif; 
 	min-width: 100px; }
-hr { border-top: 5px solid black; }
+hr { 
+	border-top: 3px solid black; }
 hr.red {
-  border-top: 1px solid blue;
-}
+  border-top: 1px solid red; }
+table {
+	margin-left: 10px;
+	margin-right: 10px; }
+
+
+
+/* Topics 7, 11, 12 & 13*/
+/* CSS3 Rules*/
+.transition1, .transition2 {
+	margin: 9px;
+	padding: 5px;
+	background-color: red;
+	min-height: 50px;
+	/*-webkit-transition: all 2s ease;*/ }
+.transition1:hover, .transition2:hover {
+	background-color: green; }
+.transition2 {
+	-webkit-transition: all 2s ease; }
 
 
 
