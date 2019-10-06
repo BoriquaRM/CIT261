@@ -59,15 +59,16 @@
 					<td class="TDnumber" rowspan="3">1</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>Loops</i></b> : Repeatedly runs a block of code, until a specific condition is met. Uses <b>for</b>, <b>for/in</b>, <b>while</b> and <b>do/while</b>. Loops are considered the most basic of JS applications.<hr class="red"></td>
-						<td class="TDcode" rowspan="3">function loopFun() {<br>
-														var x = 0;<br>
-														while(x < 4) {<br>
-															var showLoop = document.getElementById('loopID');<br>
-															showLoop.innerHTML += "Loop " + x + "." + "<br>";<br>
-															i++;<br>
-														}<br>
-														document.getElementById("buttonLoopID").style = "showLoop:none;";<br>
-														}</td>
+						<td class="TDcode" rowspan="3">JAVASCRIPT CODE<br><br>
+														function loopFun() {<br>
+															var x = 0;<br>
+															while(x < 4) {<br>
+																var showLoop = document.getElementById('loopID');<br>
+																showLoop.innerHTML += "Loop " + x + "." + "<br>";<br>
+																i++;<br>
+															}<br>
+															document.getElementById("buttonLoopID").style = "showLoop:none;";<br>
+															}</td>
 					</tr>
 					<tr>
 						<td class="TDjs"><div id="loopID"><button id="buttonID1" onclick="function1()">4 Loops</button></div></td>
@@ -84,26 +85,27 @@
 					<td class="TDnumber" rowspan="3">2</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>Conditional Statements</i></b> : Executes a block of code if a specified condition is true, or another if false. Also known as <b>If/Else</b> statements.<br>(Similar to "boolean" assignments, which view results as True/False)<hr class="red"></td>
-						<td class="TDcode" rowspan="3">function function2()<br> {
-														var response;<br>
-														var user = prompt("What's your name?");<br>
-														if (confirm && user == "") {
-															response = "Come on, you've gotta have a name.";
-														}
-														else if (user == "asdf" || user == 123) {<br>
-															response = "Dude, '" + user + "' is not a name.";<br>
-														}<br>
-														else if (user == "Yoda") {<br>
-															response = "Mmmm, Jedi master, you are.";<br>
-														} <br>
-														else if (user == null || user == "") {<br>
-															response = "Well fine then...";<br>
-														} <br>
-														else {<br>
-															response = "Hello " + user + "!";<br>
-														}<br>
-														document.getElementById("p2ID").innerHTML = response;
-														}<br></td>
+						<td class="TDcode" rowspan="3">JAVASCRIPT CODE<br><br>
+														function function2()<br> {
+															var response;<br>
+															var user = prompt("What's your name?");<br>
+															if (confirm && user == "") {
+																response = "Come on, you've gotta have a name.";
+															}
+															else if (user == "asdf" || user == 123) {<br>
+																response = "Dude, '" + user + "' is not a name.";<br>
+															}<br>
+															else if (user == "Yoda") {<br>
+																response = "Mmmm, Jedi master, you are.";<br>
+															} <br>
+															else if (user == null || user == "") {<br>
+																response = "Well fine then...";<br>
+															} <br>
+															else {<br>
+																response = "Hello " + user + "!";<br>
+															}<br>
+															document.getElementById("p2ID").innerHTML = response;
+															}<br></td>
 					</tr>
 					<tr>
 						<td class="TDjs"><button onclick="function2()">Who're you?</button><p id="pID2"></p></td>
@@ -120,7 +122,8 @@
 					<td class="TDnumber" rowspan="3">3</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>Functions</a></i></b> : A block of code designed to perform a particular task when called upon, identified with <b>()</b>.<hr class="red"></td>
-						<td class="TDcode" rowspan="3">//Range of numbers to pick from<br>
+						<td class="TDcode" rowspan="3">JAVASCRIPT CODE<br><br>
+														//Range of numbers to pick from<br>
 														var pick = {<br>
 															range: 1000,<br>
 															roll: function () {<br>
@@ -156,7 +159,8 @@
 					<td class="TDnumber" rowspan="3">4</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>Variables</i></b> : A storage location of information, unique to task. Declared by using <b>var =</b>.<hr class="red"></td>
-						<td class="TDcode" rowspan="3">// var a = 5;<br>// var b = "Five";</td>
+						<td class="TDcode" rowspan="3">JAVASCRIPT CODE<br><br>
+														// var a = 5;<br>// var b = "Five";</td>
 					</tr>
 					<tr>
 						<td class="TDjs">var a = 5;<br>var b = "Five";</td>
@@ -173,7 +177,8 @@
 					<td class="TDnumber" rowspan="3">5</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>Parameters</i></b> : Names listed in the function definition. Functions have () at the end of their name, but variables can be placed inside to define which ones are affected.<hr class="red"></td>
-						<td class="TDcode" rowspan="3">function theAnswer() {<br>
+						<td class="TDcode" rowspan="3">JAVASCRIPT CODE<br><br>
+													function theAnswer() {<br>
 														function function5(x, y) { <br>
 															return x + y;<br>
 														}<br>
@@ -196,7 +201,8 @@
 					<td class="TDnumber" rowspan="3">6</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>Arrays</i></b> : A line of data, separated by commas, identified by <b>[]</b>.<hr class="red"></td>
-						<td class="TDcode" rowspan="3">function array() {<br>
+						<td class="TDcode" rowspan="3">JAVASCRIPT CODE<br><br>
+														function array() {<br>
 															var bestThings = ["Sneks", "Chips", "Hot Sauce"];<br>
 															document.getElementById("pID6").innerHTML = bestThings; <br>
 															document.getElementById("buttonID6").style = "display:none;";<br>
@@ -217,7 +223,8 @@
 					<td class="TDnumber" rowspan="3">7</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>Associative Arrays</i></b> : Arrays that the user can redefine as needed. Combinations incluse shift, unshift, pop and push.<hr></td>
-						<td class="TDcode" rowspan="3">var foodPop = ["Chips", " Salsa", " Nachos", " Cake", " Cookies", " Chocolate"];<br>
+						<td class="TDcode" rowspan="3">JAVASCRIPT CODE<br><br>
+														var foodPop = ["Chips", " Salsa", " Nachos", " Cake", " Cookies", " Chocolate"];<br>
 														document.getElementById("pID7a").innerHTML = foodPop;<br>
 														function arrayAssA() {<br>
 															foodPop.pop();<br>
