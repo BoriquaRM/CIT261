@@ -22,13 +22,17 @@ main h1, main h2, main h3 {
 	text-align: center; 
 	margin: 0px;
 	font-size: .8em;}
-p, ul, ol, a, td, button, .jsscript {
+p, ul, ol, a, td, button {
 	font-family: Agency FB, serif; }
 button {
-	border-radius: 5px 5px 5px 5px; }
+	border-radius: 5px 5px 5px 5px;
+	padding: inherit;
+	display: flex;
+	align-items: center;
+	justify-content: center;	}
 button:hover {
 	box-shadow: 0px 0px 2px 2px #ccc; }
-.column, .columnnav, .jsscript {
+.column, .columnnav {
 	font-size: 1em;
 	float: left;
 	padding: 0px 20px 0px 20px;
@@ -53,8 +57,7 @@ td { padding: 10px; }
 .TDjs {
 	min-width: 160px;
 	max-width: 200px;
-	border: solid 2px black;
-	text-align: left; }
+	border: solid 2px black; }
 .TDjs p {
 	text-align: center; }
 .TDcode {
@@ -67,36 +70,6 @@ hr { border-top: 5px solid black; }
 hr.red {
   border-top: 1px solid blue;
 }
-
-
-
-/* GRID Layout and Container Info */
-.itemL { grid-area: left; text-align: center; width: 50px;}
-.itemM { grid-area: mid; max-width: 150px}
-.itemR { grid-area: right; }
-.itemJS {grid-area: js; text-align: left; font-size: .5em; border: solid 2px black; padding: 3px; font-family: Verdana, Geneva, sans-serif; }
-.grid-container { display: grid; grid-template-areas: 'left mid right js';	grid-gap: 10px;	padding: 10px; }
-.grid-container > div {	 }
-
-
-
-
-
-
-
-/* Topic 1 */
-.jsscript {
-	padding: 10px 10px 10px 10px;
-	text-align: center;
-	max-width: 140px;
-	max-height: auto;
-	border: solid 2px black; }
-
-
-
-
-
-
 
 
 

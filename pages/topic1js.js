@@ -6,7 +6,7 @@
 		function function1() {
 			var x = 0;
 			while(x < 4) {
-				var showLoop = document.getElementById('loopID');
+				var showLoop = document.getElementById('pID1');
 				showLoop.innerHTML += "Loop " + x + "." + "<br>";
 				x++;
 			}
@@ -37,25 +37,25 @@
 
 // #3 Functions
 		//Range of numbers to pick from
-var pick = {
-range: 1000,
-roll: function () {
-var randomNumber = Math.floor(Math.random() * this.range) + 1;
-return randomNumber;
-}
-}
-//Shows the number generated
-function showNumber(number) {
-var numberResult = document.getElementById('numberResult');
-numberResult.innerHTML = number;
-}
-//Clickable button
-var button = document.getElementById('button3');
-//Clicking button runs "function()"
-button.onclick = function() {
-var result = pick.roll();
-showNumber(result);
-}
+		var pick = {
+		range: 1000,
+		roll: function () {
+			var randomNumber = Math.floor(Math.random() * this.range) + 1;
+			return randomNumber;
+			}
+		}
+		//Shows the number generated
+		function showNumber(number) {
+			var numberResult = document.getElementById('numberResult');
+			numberResult.innerHTML = number;
+		}
+		//Clickable button
+		var button = document.getElementById('button3');
+		//Clicking button runs "function()"
+		button.onclick = function() {
+			var result = pick.roll();
+			showNumber(result);
+		}
 
 // #4 Variables 
 		// var a = 5;
@@ -67,7 +67,13 @@ showNumber(result);
 				return x + y;
 			}
 			document.getElementById("pID5").innerHTML = function5(40, 2); 
-			document.getElementById("buttonID5").style = "display:none;";
+			document.getElementById("buttonID5").innerHTML = "What's the Ultimate Question...???";
+			var btn = document.getElementById('buttonID5');
+				btn.onclick = function () {
+					document.getElementById('buttonID5').remove();
+					this.remove();
+					document.getElementById("pID5").innerHTML = "No idea."; 
+				}
 		}
 		
 // #6 Arrays 
