@@ -72,7 +72,7 @@
 					</tr>
 					<tr>
 						<td class="TDjs"><button id="buttonID1" onclick="function1()">4 Loops</button><p id="pID1"></p></td>
-						<td>This loop has a limit of 4, then terminates. It uses the "while" tag, indicating that while x < 4, it will continue running the function.<br>To ensure that the function does not repeat, the button is disabled once finished. Since JS considers "0" as the first number, so counts it as #1.</td>
+						<td>This loop has a limit of 4, then terminates. It uses the "while" tag, indicating that while x < 4, it will continue running the function.<br><br>To ensure that the function does not repeat, the button is disabled once finished. Since JS considers "0" as the first number, so counts it as #1.</td>
 					</tr>
 				</tr>
 				</tbody>
@@ -146,7 +146,7 @@
 					</tr>
 					<tr>
 						<td class="TDjs"><button id="button3">Random Number Gen<br>( 1 - 1000 )</button><p id="numberResult"></p></td>
-						<td>Clicking the button repeatedly will give a randomly chosen number, based on the range given inside the JS code.<br>The button does not disappear once clicked, making this function a repeatable one that replaces each number with a new one.</td>
+						<td>Clicking the button repeatedly will give a randomly chosen number, based on the range given inside the JS code.<br><br>The button does not disappear once clicked, making this function a repeatable one that replaces each number with a new one.</td>
 					</tr>
 				</tr>
 				</tbody>
@@ -210,7 +210,7 @@
 					</tr>
 					<tr>
 						<td class="TDjs"><button onclick="array()" id="buttonID6">Best Things Ever</button><p id="pID6"></p></td>
-						<td>A variable is given an array of items within a [], and is summoned by clicking the button.</td>
+						<td>A variable is given an array of items within a [], and is summoned by clicking the button.<br><br>As with previous examples, the button's CSS style is set to <b>display:none</b> within the JavaScript function so that this is not repeatable.</td>
 					</tr>
 				</tr>
 				</tbody>
@@ -222,7 +222,7 @@
 				<tr>
 					<td class="TDnumber" rowspan="3">7</td>
 					<tr>
-						<td class="TDdef" colspan="2"><b><i>Associative Arrays</i></b> : Arrays that the user can redefine as needed. Combinations incluse shift, unshift, pop and push.<hr class="red"></td>
+						<td class="TDdef" colspan="2"><b><i>Associative Arrays</i></b> : Arrays that the user can redefine and update as needed. Combinations incluse <b>.shift</b>, <b>.unshift</b>, <b>.pop</b> and <b>.push</b>.<hr class="red"></td>
 						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
 														var foodPop = ["Chips", " Salsa", " Nachos", " Cake", " Cookies", " Chocolate"];<br>
 														document.getElementById("pID7a").innerHTML = foodPop;<br>
@@ -245,7 +245,7 @@
 					</tr>
 					<tr>
 						<td class="TDjs"><button onclick="arrayAssA()" id="buttonID7a">Eat!</button><p id="pID7a"></p><br><button onclick="arrayAssB()" id="buttonID7b">Eat!</button><p id="pID7b"></p></td>
-						<td>Clicking the top button removes the last item on the array, using the ".pop" addition, until all of the items are gone.<br>Clicking the bottom button removes from the first array item. </td>
+						<td>Clicking the top button removes the last item on the array, using the <b>.pop</b> property, until all of the items are gone.<br><br>Clicking the bottom button removes from the first array item, using the <b>.shift</b> property instead.<br><br>The button does not 'need' to get removed in thi case, since the function has reach the end of its line and cannot repeat anyways.</td>
 					</tr>
 				</tr>
 				</tbody>
