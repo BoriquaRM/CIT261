@@ -45,16 +45,21 @@ button:hover {
 	content: "";
 	display: table;
 	clear: both; }
-li a, i { color: red; }
-li { font-size: .9em; }
-td { padding: 10px; }
+li a, i { 
+	color: red; }
+li { 
+	font-size: .9em; }
+td { 
+	padding: 10px; }
 .TDnumber {
 	padding: 20px;
 	font-size: 2.5em; 
 	width: 50px;}
 .TDdef {
 	width: 100%; }
-.TDjs {
+.TDjs, button {
+	display: grid;
+	justify-content: center;
 	min-width: 160px;
 	max-width: 200px;
 	border: solid 2px black; }
@@ -73,7 +78,18 @@ hr.red {
 table {
 	margin-left: 10px;
 	margin-right: 10px; }
-
+.active, .inactive, .pending {
+	display: table; 
+	padding-right: 30px;
+	margin-left: 30px;
+	background-color: green;
+	color: white;}
+.inactive {
+	background-color: black;
+	color: white;}
+.pending {
+	background-color: yellow;
+	color: black;}
 
 
 /* Topics 7, 11, 12 & 13*/
@@ -89,15 +105,16 @@ table {
 .transition2 {
 	-webkit-transition: all 2s ease; }
 #transImg {
-  position:relative;
-  height:281px;
-  width:450px;}
+	position: relative;
+	height: 281px;
+	width: 450px; }
 #transImg img {
-  position:absolute;
-  -webkit-transition: opacity 1s ease-in-out;}
+	position:absolute;
+	-webkit-transition: opacity 1s ease-in-out; }
 #transImg img.imgTop:hover {
-  opacity:0;}
-.imgTop, .imgBottom {width: 200px;}
+	opacity:0; }
+.imgTop, .imgBottom { 
+	width: 200px; }
 
 
 /* DROPMENU */
