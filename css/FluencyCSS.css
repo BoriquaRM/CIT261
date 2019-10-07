@@ -24,14 +24,6 @@ main h1, main h2, main h3 {
 	font-size: .8em;}
 p, ul, ol, a, td, button {
 	font-family: Agency FB, serif; }
-button {
-	border-radius: 5px 5px 5px 5px;
-	padding: inherit;
-	display: flex;
-	align-items: center;
-	justify-content: center; }
-button:hover {
-	box-shadow: 0px 0px 2px 2px #ccc; }
 .column, .columnnav {
 	font-size: 1em;
 	float: left;
@@ -50,6 +42,7 @@ li a, i {
 li { 
 	font-size: .9em; }
 td { 
+	height: auto;
 	padding: 10px; }
 .TDnumber {
 	padding: 20px;
@@ -57,11 +50,13 @@ td {
 	width: 50px;}
 .TDdef {
 	width: 100%; }
-.TDjs, button {
+.TDjs {
 	display: grid;
 	justify-content: center;
 	min-width: 160px;
 	max-width: 200px;
+	min-height: 120px;
+	height: auto;
 	border: solid 2px black; }
 .TDjs p {
 	text-align: center; }
@@ -90,6 +85,14 @@ table {
 .pending {
 	background-color: yellow;
 	color: black;}
+button {
+	border-radius: 5px 5px 5px 5px;
+	padding: inherit;
+	display: grid;
+	align-items: center;
+	justify-content: center; }
+button:hover {
+	box-shadow: 0px 0px 2px 2px #ccc; }
 
 
 /* Topics 7, 11, 12 & 13*/
@@ -98,24 +101,27 @@ table {
 	margin: 9px;
 	padding: 5px;
 	background-color: red;
+	min-width: 50px;
 	min-height: 50px;
 	/*-webkit-transition: all 2s ease;*/ }
 .transition1:hover, .transition2:hover {
 	background-color: green; }
 .transition2 {
 	-webkit-transition: all 2s ease; }
-#transImg {
-	position: relative;
-	height: 281px;
+.transImg {
+	position: absolute;
 	width: 450px; }
-#transImg img {
+.transImg img {
 	position:absolute;
 	-webkit-transition: opacity 1s ease-in-out; }
-#transImg img.imgTop:hover {
+.transImg img.imgTop:hover {
 	opacity:0; }
 .imgTop, .imgBottom { 
-	width: 200px; }
+	width: 158px; }
 
+
+/* NAVIGATION BAR LOCKED TO TOP */
+.navbar { background-color: white; position: fixed; top: 0; z-index: 1;}
 
 /* DROPMENU */
 .dropbtn { color: white; padding: 26px; font-size: 25px;	border: none; background-color: #7C7C7C; border-radius: 0px;}
