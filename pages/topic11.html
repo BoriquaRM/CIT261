@@ -129,6 +129,44 @@
 					</tbody>
 				</table>
 			</div><hr>
+			
+<!-- EXAMPLE 4 -->
+			<div>
+				<table><a id="THREE"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">4</td>
+						<tr>
+							<td class="TDdef" colspan="2"><b><i>Example 4</i></b> : Using images.<hr class="red"></td>
+							<td class="TDcode" rowspan="3"><b>CSS CODE</b><br><br>
+															<br>#transImg {
+																<p style="margin-left:10%">
+																	position:relative;<br>
+																	height:281px;<br>
+																	width:450px;}</p>
+																#transImg img {
+																<p style="margin-left:10%">
+																	position:absolute;<br>
+																	-webkit-transition: opacity 1s ease-in-out;}</p>
+																#transImg img.imgTop:hover {
+																<p style="margin-left:10%">
+																	opacity:0;}</p>
+																.imgTop, .imgBottom { 
+																<p style="margin-left:10%">
+																	width: 200px; }</p></td>
+						</tr>
+						<tr>
+							<td class="TDjs">
+							<div id="transImg">
+								<img class="imgBottom" src="../images/7s.png" />
+								<img class="imgTop" src="../images/12s.png" />
+							</div></td>
+							<td>Using a &ltdiv&gt with &ltimg&gt's inside, two pictures are layered one on top of the other, but the top image is disolved away once the mouse hovers over it. In this way, the image transitions from one to another.</td>
+						</tr>
+					</tr>
+					</tbody>
+				</table>
+			</div><hr>
 		</main>
 <!-- END OF THE LINE -->
 	<footer>
