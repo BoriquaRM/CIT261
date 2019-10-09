@@ -183,7 +183,13 @@
 															return x + y;<br>
 														}<br>
 														document.getElementById("pID5").innerHTML = function5(40, 2); <br>
-														document.getElementById("buttonID5").style = "display:none;";<br>
+														document.getElementById("buttonID5").innerHTML = "What's the Ultimate Question...???";<br>
+														var btn = document.getElementById('buttonID5');<br>
+															btn.onclick = function () {<br>
+																document.getElementById('buttonID5').remove();<br>
+																this.remove();<br>
+																document.getElementById("pID5").innerHTML = "No idea."; <br>
+															}<br>
 													}</td>
 					</tr>
 					<tr>

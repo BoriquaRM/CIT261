@@ -51,6 +51,7 @@ td {
 .TDdef {
 	width: 100%; }
 .TDjs {
+	z-index:0;
 	display: grid;
 	justify-content: center;
 	min-width: 160px;
@@ -62,10 +63,10 @@ td {
 	text-align: center; }
 .TDcode {
 	text-align: left; 
-	font-size: .3em; 
+	font-size: .45em; 
 	border: solid 2px black; 
 	font-family: Verdana, Geneva, sans-serif; 
-	min-width: 100px; }
+	min-width: 150px; }
 hr { 
 	border-top: 3px solid black; }
 hr.red {
@@ -85,6 +86,12 @@ table {
 .pending {
 	background-color: yellow;
 	color: black;}
+.active:after {
+	content: "SUBMITTED!!";}
+.inactive:after {
+	content: "Not Active...";}
+.pending:after {
+	content: "Pending...";}
 button {
 	border-radius: 5px 5px 5px 5px;
 	padding: inherit;
@@ -95,29 +102,105 @@ button:hover {
 	box-shadow: 0px 0px 2px 2px #ccc; }
 
 
-/* Topics 7, 11, 12 & 13*/
-/* CSS3 Rules*/
+/* Topic 11 */
 .transition1, .transition2 {
 	margin: 9px;
 	padding: 5px;
 	background-color: red;
 	min-width: 50px;
 	min-height: 50px;
-	/*-webkit-transition: all 2s ease;*/ }
+	/transition: all 2s ease;*/ }
 .transition1:hover, .transition2:hover {
 	background-color: green; }
 .transition2 {
-	-webkit-transition: all 2s ease; }
+	transition: all 2s ease; }
 .transImg {
 	position: absolute;
 	width: 450px; }
 .transImg img {
-	position:absolute;
-	-webkit-transition: opacity 1s ease-in-out; }
+	position: absolute;
+	transition: opacity 1s ease-in-out; }
 .transImg img.imgTop:hover {
 	opacity:0; }
 .imgTop, .imgBottom { 
 	width: 158px; }
+	
+/* Topic 12 */
+.transform {
+	background-color: yellow;
+	transform: rotate(30deg); }
+.skew {
+	background-color: orange;
+	transform: skewX(-30deg); }
+.scale {
+	background-color: red;
+	color: white;
+	transform: scaleY(.4); }
+
+/* Topic 13 */
+.animate1 {
+	padding: 10px;
+	background-color: red;
+	animation-name: example1;
+	animation-duration: 10s;}
+@keyframes example1 {
+	0%   {background-color: red;}
+	25%  {background-color: yellow;}
+	75%  {background-color: blue;}
+	100% {background-color: red;}}
+.animate2 {
+	padding: 10px;
+	background-color: red;
+	position: relative;
+	animation-name: example2;
+	animation-duration: 2s;
+	animation-delay: 9s;
+	animation-iteration-count: 2; }
+@keyframes example2 {
+	0%   {left:0px; top:0px;}
+	25%  {left:400px; top:0px;}
+	50%  {left:200px; top:200px;}
+	75%  {left:0px; top:-300px;}
+	90%  {left: 0px; top: 50px;}
+	100% {left:0px; top:0px;}}
+.animate3 {
+	padding: 10px;
+	background-color: red;
+	position: relative;
+	animation-name: example3;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;}
+@keyframes example3 {
+	0%   {left:0px; top:0px; }
+	10%   {left:0px; top:0px;}
+	20%  {left:0px; top:5px; transform: rotate(0deg);}
+	80%  {left:0px; top:50px; transform: rotate(30deg);}
+	100% {left:0px; top:0px;}}
+.animate4 {
+	padding: 10px;
+	background-color: red;}
+.animate4:hover {
+	position: relative;
+	animation-name: example4;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;}
+@keyframes example4 {
+	0%   {left:0px; top:0px; }
+	50%   {left:50px; top:0px;}
+	100%  {left:200px; top:5px; transform: rotate(90deg);}}
+.animate5 {
+	padding: 10px;
+	background-color: red;
+	position: relative;
+	animation-name: example5;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;}
+@keyframes example5 {
+	0%   {left:0px; top:0px; }
+	30%   {left:10px; top:-90px; transform: skewX(60deg);}
+	70%   {left:160px; top:50px; transform: rotate(181deg);}
+	90%   {left:160px; top:50px; transform: scale(2);}
+	100%  {left:0px; top:0px; transform: rotate(0deg); transform: scale(1); transform: skew(0deg);}}
 
 
 /* NAVIGATION BAR LOCKED TO TOP */
@@ -126,7 +209,7 @@ button:hover {
 /* DROPMENU */
 .dropbtn { color: white; padding: 26px; font-size: 25px;	border: none; background-color: #7C7C7C; border-radius: 0px;}
 .dropdown {	position: relative;	display: inline-block; }
-.dropdown-content {	display: none; position: absolute; background-color: #304776; }
+.dropdown-content {	display: none; position: absolute; background-color: #304776; z-index: 1;}
 .dropdown-content a { width: max-content; color: white; padding: 12px 27px;	display: block; }
 .dropdown-content a:hover {	background-color: green; width: 100%; box-shadow: 0px 0px 3px grey;}
 .dropdown:hover .dropdown-content {	display: block; }

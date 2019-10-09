@@ -61,13 +61,13 @@
 																<p style="margin-left:10%">padding: 5px;<br>
 																background-color: red;<br>
 																min-height: 50px;<br>
-																<i>/*-webkit-transition: all 2s ease;*/</i> }</p>
+																<i>/*transition: all 2s ease;*/</i> }</p>
 															.transition1:hover, .transition2:hover {<br>
 																<p style="margin-left:10%">background-color: green; }</p></td>
 						</tr>
 						<tr>
 							<td class="TDjs"><div class="transition1"></div></td>
-							<td>The <b>:hover</b> tag in CSS will affect the object when the cursor "hovers" over it. In this case, it changes color from red to green.<br>(Note: <b>-webkit-transition</b> is disabled)</td>
+							<td>The <b>:hover</b> tag in CSS will affect the object when the cursor "hovers" over it. In this case, it changes color from red to green.<br>(Note: <b>transition</b> is disabled)</td>
 						</tr>
 					</tr>
 					</tbody>
@@ -87,13 +87,13 @@
 																<p style="margin-left:10%">padding: 5px;<br>
 																background-color: red;<br>
 																min-height: 50px;<br>
-																-webkit-transition: all 2s ease; }</p>
+																transition: all 2s ease; }</p>
 															.transition2:hover {<br>
 																<p style="margin-left:10%">background-color: green; }</p></td>
 						</tr>
 						<tr>
 							<td class="TDjs"><div class="transition2"></div></td>
-							<td>The <b>:hover</b> tag is still in effect, but the <b>-webkit-transition</b> tag in CSS is now enabled, giving the intended effect over <b>2 seconds</b>.</td>
+							<td>The <b>:hover</b> tag is still in effect, but the <b>transition</b> tag in CSS is now enabled, giving the intended effect over <b>2 seconds</b>.</td>
 						</tr>
 					</tr>
 					</tbody>
@@ -114,11 +114,11 @@
 																padding: 5px;<br>
 																background-color: red;<br>
 																min-height: 50px;<br>
-																/*-webkit-transition: all 2s ease;*/ }</p>
+																/*transition: all 2s ease;*/ }</p>
 															.transition1:hover, .transition2:hover {<br>
 																<p style="margin-left:10%">background-color: green; }</p>
 															.transition2 {
-																<p style="margin-left:10%">-webkit-transition: all 2s ease; }</p></td>
+																<p style="margin-left:10%">transition: all 2s ease; }</p></td>
 						</tr>
 						<tr>
 							<td class="TDjs"><div class="transition1"><div class="transition2"></div></div><div class="transition2"><div class="transition1"></div></div><div class="transition1"><div class="transition2"><div class="transition1"><div class="transition2"></div></div></div></div></td>
@@ -148,7 +148,7 @@
 																#transImg img {
 																<p style="margin-left:10%">
 																	position:absolute;<br>
-																	-webkit-transition: opacity 1s ease-in-out;}</p>
+																	transition: opacity 1s ease-in-out;}</p>
 																#transImg img.imgTop:hover {
 																<p style="margin-left:10%">
 																	opacity:0;}</p>
@@ -162,7 +162,7 @@
 								<img class="imgBottom" src="../images/7s.png" />
 								<img class="imgTop" src="../images/12s.png" />
 							</div></td>
-							<td>Using a &ltdiv&gt with &ltimg&gt's inside, two pictures are layered one on top of the other, but the top image is disolved away once the mouse hovers over it. In this way, the image transitions from one to another.</td>
+							<td>Using a &ltdiv&gt with &ltimg&gt's inside, two pictures are layered one on top of the other, but the <b>.imgTop</b> is dissolved away once the mouse hovers over it, showing the <b>.imgBottom</b> picture. In this way, the image transitions from one to another.</td>
 						</tr>
 					</tr>
 					</tbody>

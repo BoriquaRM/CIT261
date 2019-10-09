@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>CIT 261 | Topic 13</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="../css/FluencyCSS.css" type="text/css" />
+	</head>
+	<body>
+<!-- DROPMENU -->
+		<header>
+			<div class="row">
+				<div class="columnnav">
+					<div class="dropdown">
+						<button class="dropbtn">Menu</button>
+						<div class="dropdown-content">
+							<a href="../index.html">Home</a>
+							<a href="topic1.html">Topic 1</a>
+							<a href="topic2.html">Topic 2</a>
+							<a href="topic3.html">Topic 3</a>
+							<a href="topic4.html">Topic 4</a>
+							<a href="topic5.html">Topic 5</a>
+							<a href="topic6.html">Topic 6</a>
+							<a href="topic7.html">Topic 7</a>
+							<a href="topic8.html">Topic 8</a>
+							<a href="topic9.html">Topic 9</a>
+							<a href="topic10.html">Topic 10</a>
+							<a href="topic11.html">Topic 11</a>
+							<a href="topic12.html">Topic 12</a>
+							<a href="topic13.html">Topic 13</a>
+						</div>
+					</div>
+				</div>
+				<div class="columnnav">
+					<h1>Topic 13 - <i>CSS3 Transforms</i></h1>
+				</div>
+			</div>
+		</header>
+		
+<!-- INDEX -->
+		<main>
+			<div>
+				<h3>INDEX</h3>
+				<ol>
+					<li><a href="#ONE">Color Change</a></li>
+					<li><a href="#TWO">Moving the Object</a></li>
+					<li><a href="#THREE">Forever Chain</a></li>
+					<li><a href="#FOUR">Hover Animation</a></li>
+					<li><a href="#FIVE">Many Examples</a></li>
+				</ol>
+			</div>
+			<hr>
+<!-- EXAMPLE 1 -->
+			<div>
+				<table><a id="ONE"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">1</td>
+						<tr>
+							<td class="TDdef" colspan="2"><b><i>Color Change</i></b> : Rotates through colors on an animation sequence called <b>@keyframes</b>, after giving the keyframe sequence a unique name. Starts on a 3-second delay.<hr class="red"></td>
+							<td class="TDcode" rowspan="3"><b>CSS CODE</b><br><br>
+															.animate1 {<br>
+																<p style="margin-left:10%">background-color: red;<br>
+																animation-name: <i>example1</i>;<br>
+																animation-duration: 7s;}</p>
+															@keyframes <i>example1</i> {<br>
+																<p style="margin-left:10%">0%   {background-color: red;}<br>
+																25%  {background-color: yellow;}<br>
+																75%  {background-color: blue;}<br>
+																100% {background-color: green;}}</p></td>
+						</tr>
+						<tr>
+							<td class="TDjs"><div class="animate1"><p>This changes color</p></div></td>
+							<td>This cycles through a set of colors in CSS, each changing at set percentages, treating it as a timeline. As a default, once it's completed it does not repeat.<br><br>(Note: the animation <i>name</i> needs to be unique from any other animations you have on the page, otherwise they may run the same animation)</td>
+						</tr>
+					</tr>
+					</tbody>
+				</table>
+			</div><hr>
+			
+<!-- EXAMPLE 2 -->
+			<div>
+				<table><a id="TWO"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">2</td>
+						<tr>
+							<td class="TDdef" colspan="2"><b><i>Moving the Object</i></b> : This moves the object on a set path of motion, then returns it to its starting point. Uses the <b>animation-iteration-count: 2</b> tag.<hr class="red"></td>
+							<td class="TDcode" rowspan="3"><b>CSS CODE</b><br><br>
+															.animate2 {<br>
+																<p style="margin-left:10%">padding: 10px;<br>
+																background-color: red;<br>
+																position: relative;<br>
+																animation-name: example2;<br>
+																animation-duration: 2s;<br>
+																animation-delay: 9s;<br>
+																animation-iteration-count: 2; }</p>
+															@keyframes example2 {
+																<p style="margin-left:10%">0%   {left:0px; top:0px;}<br>
+																25%  {left:400px; top:0px;}<br>
+																50%  {left:200px; top:200px;}<br>
+																75%  {left:0px; top:-300px;}<br>
+																90%  {left: 0px; top: 50px;}<br>
+																100% {left:0px; top:0px;}}</p></td>
+						</tr>
+						<tr>
+							<td class="TDjs"><div class="animate2"><p>This moves around</p></div></td>
+							<td>This animation starts 9 seconds after the page loads, and repeats twice. The @keyframe tags control the X&Y coordinates at the percentage points, much like a timeline.<br><br>The <b>position: relative;</b> tag is vital so that the animation occurs where it's placed.</td>
+						</tr>
+					</tr>
+					</tbody>
+				</table>
+			</div><hr>
+			
+<!-- EXAMPLE 3 -->
+			<div>
+				<table><a id="THREE"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">3</td>
+						<tr>
+							<td class="TDdef" colspan="2"><b><i>Forever Chain</i></b> : This is a chain of animations that goes on without end. Uses the <b>: infinite</b> tag.<hr class="red"></td>
+							<td class="TDcode" rowspan="3"><b>CSS CODE</b><br><br>
+															.animate3 {<br>
+																<p style="margin-left:10%">padding: 10px;<br>
+																background-color: red;<br>
+																position: relative;<br>
+																animation-name: example3;<br>
+																animation-duration: 3s;<br>
+																animation-iteration-count: infinite;}</p>
+															@keyframes example3 {<br>
+																<p style="margin-left:10%">0%   {left:0px; top:0px; }<br>
+																10%   {left:0px; top:0px;}<br>
+																20%  {left:0px; top:5px; <i>transform: rotate(0deg);</i>}<br>
+																80%  {left:0px; top:50px; <i>transform: rotate(30deg);</i>}<br>
+																100% {left:0px; top:0px;}}</p></td>
+						</tr>
+						<tr>
+							<td class="TDjs"><div class="animate3"><p>This goes on forever...</p></div></td>
+							<td><p>This animation goes on forever, because of the <b>: infinite</b> tag, but it also incorporates the <b>transform: rotate</b> tag from Topic 12.<br><br>(Note: the rotate animation is set at 0 on the 20% marker, meaning that it will start rotating after 20%)</td>
+						</tr>
+					</tr>
+					</tbody>
+				</table>
+			</div><hr>
+			
+<!-- EXAMPLE 4 -->
+			<div>
+				<table><a id="FOUR"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">4</td>
+						<tr>
+							<td class="TDdef" colspan="2"><b><i>Hover Animation</i></b> : Utilizing the <b>:hover</b> tag to trigger an animation.<hr class="red"></td>
+							<td class="TDcode" rowspan="3"><b>CSS CODE</b><br><br>
+															.animate4 {<br>
+																<p style="margin-left:10%">padding: 10px; <br>
+																background-color: red;}</p>
+															.animate4<i>:hover</i> {<br>
+																<p style="margin-left:10%">position: relative;<br>
+																animation-name: example4;<br>
+																animation-duration: 3s;<br>
+																animation-iteration-count: infinite;}</p>
+															@keyframes example4 {<br>
+																<p style="margin-left:10%">0%   {left:0px; top:0px; }<br>
+																50%   {left:50px; top:0px;}<br>
+																100%  {left:200px; top:5px; transform: rotate(90deg);}}</p></td>
+						</tr>
+						<tr>
+							<td class="TDjs"><div class="animate4"><p>Hover over me!</p></div></td>
+							<td><p>When the mouse is placed over the red box, the animation will start, but will end when the mouse is no longer hovering on it.</td>
+						</tr>
+					</tr>
+					</tbody>
+				</table>
+			</div><hr>
+			
+<!-- EXAMPLE  5 -->
+			<div>
+				<table><a id="FIVE"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">5</td>
+						<tr>
+							<td class="TDdef" colspan="2"><b><i>Many Examples</i></b> : Utilizing previous tags into a single animation.<hr class="red"></td>
+							<td class="TDcode" rowspan="3"><b>CSS CODE</b><br><br>
+															.animate5 {<br>
+																<p style="margin-left:10%">padding: 10px;<br>
+																background-color: red;<br>
+																position: relative;<br>
+																animation-name: example5;<br>
+																animation-duration: 8s;<br>
+																animation-iteration-count: infinite;}</p>
+															@keyframes example5 {<br>
+																<p style="margin-left:10%">0%   {left:0px; top:0px; }<br>
+																30%   {left:10px; top:-90px; transform: skewX(60deg);}<br>
+																70%   {left:160px; top:50px; transform: rotate(181deg);}<br>
+																90%   {left:160px; top:50px; transform: scale(2);}<br>
+																100%  {left:0px; top:0px; transform: rotate(0deg); transform: scale(1); transform: skew(0deg);}}</p></td>
+						</tr>
+						<tr>
+							<td class="TDjs"><div class="animate5"><p>I feel sick...</p></div></td>
+							<td><p>Using <b>rotate</b>, <b>scale</b>, <b>skew</b> and <b>move</b>. Only one <b>transform</b> tag can be used in a line.</b></td>
+						</tr>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</main>
+<!-- END OF THE LINE -->
+	<footer>
+        <p>&copy;2019 David Olsen - CIT261, <a href="http://www.byui.edu/online">BYU-Idaho Online</a></p>
+	</footer>
+		<script src="../css/dropmenu.js"></script>
+	</body>
+</html>

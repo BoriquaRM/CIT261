@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>CIT 261 | Topic 12</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="../css/FluencyCSS.css" type="text/css" />
+	</head>
+	<body>
+<!-- DROPMENU -->
+		<header>
+			<div class="row">
+				<div class="columnnav">
+					<div class="dropdown">
+						<button class="dropbtn">Menu</button>
+						<div class="dropdown-content">
+							<a href="../index.html">Home</a>
+							<a href="topic1.html">Topic 1</a>
+							<a href="topic2.html">Topic 2</a>
+							<a href="topic3.html">Topic 3</a>
+							<a href="topic4.html">Topic 4</a>
+							<a href="topic5.html">Topic 5</a>
+							<a href="topic6.html">Topic 6</a>
+							<a href="topic7.html">Topic 7</a>
+							<a href="topic8.html">Topic 8</a>
+							<a href="topic9.html">Topic 9</a>
+							<a href="topic10.html">Topic 10</a>
+							<a href="topic11.html">Topic 11</a>
+							<a href="topic12.html">Topic 12</a>
+							<a href="topic13.html">Topic 13</a>
+						</div>
+					</div>
+				</div>
+				<div class="columnnav">
+					<h1>Topic 12 - <i>CSS3 Transforms</i></h1>
+				</div>
+			</div>
+		</header>
+		
+<!-- INDEX -->
+		<main>
+			<div>
+				<h3>INDEX</h3>
+				<ol>
+					<li><a href="#ONE">Rotating</a></li>
+					<li><a href="#TWO">Skewing</a></li>
+					<li><a href="#THREE">Scaling</a></li>
+				</ol>
+			</div>
+			<hr>
+<!-- EXAMPLE 1 -->
+			<div>
+				<table><a id="ONE"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">1</td>
+						<tr>
+							<td class="TDdef" colspan="2"><b><i>Rotating</i></b> : Tilting the box and text area on a desired degree amount. Uses the <b>transform: rotate</b> tag.<hr class="red"></td>
+							<td class="TDcode" rowspan="3"><b>CSS CODE</b><br><br>
+															.transform {
+																<p style="margin-left:10%">background-color: yellow;<br>
+																transform: rotate(30deg); }</p></td>
+						</tr>
+						<tr>
+							<td class="TDjs"><div class="transform"><p>This is rotated at 30°</p></div></td>
+							<td>This does nothing more than rotate the existing object on a pivot point by 30°. The degree amount can be changed in CSS.</td>
+						</tr>
+					</tr>
+					</tbody>
+				</table>
+			</div><hr>
+			
+<!-- EXAMPLE 2 -->
+			<div>
+				<table><a id="TWO"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">2</td>
+						<tr>
+							<td class="TDdef" colspan="2"><b><i>Skewing</i></b> : This stretches the object along a single axis point, giving it a "leaning" look. Uses the <b>transform: skew</b> tag.<hr class="red"></td>
+							<td class="TDcode" rowspan="3"><b>CSS CODE</b><br><br>
+															.skew {<br>
+																<p style="margin-left:10%">background-color: orange;<br>
+																transform: skewX(-30deg); }</p></td>
+						</tr>
+						<tr>
+							<td class="TDjs"><div class="skew"><p>This is skewed at -30° on the X-axis</p></div></td>
+							<td>This leans the object at an angle, so it looks like it's leaning, trying to give a 3D concept. In this example, the object is leaning at a negative value.</td>
+						</tr>
+					</tr>
+					</tbody>
+				</table>
+			</div><hr>
+			
+<!-- EXAMPLE 3 -->
+			<div>
+				<table><a id="THREE"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">3</td>
+						<tr>
+							<td class="TDdef" colspan="2"><b><i>Scaling</i></b> : Stretches an entire object as a whole, or along the X/Y axis. It can give a "rubberband" effect, or a "squished" effect. Uses the <b>transform: scale</b> tag.<hr class="red"></td>
+							<td class="TDcode" rowspan="3"><b>CSS CODE</b><br><br>
+															.scale {<br>
+																<p style="margin-left:10%">background-color: red;<br>color: white;<br>
+																transform: scaleY(0.4); }</p></td>
+						</tr>
+						<tr>
+							<td class="TDjs"><div class="scale"><p>This is scaled at .4 on the Y-axis</p></div></td>
+							<td><p>This example is a bit hard to read, only because it is squished at .4, which means it is 40% of its normal height. If the scaleY was set to 1.4, it would be stretched to 140% of its height.</td>
+						</tr>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</main>
+<!-- END OF THE LINE -->
+	<footer>
+        <p>&copy;2019 David Olsen - CIT261, <a href="http://www.byui.edu/online">BYU-Idaho Online</a></p>
+	</footer>
+		<script src="../css/dropmenu.js"></script>
+	</body>
+</html>
