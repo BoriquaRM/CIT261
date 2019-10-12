@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>CIT 261 | Topic 10</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="../css/FluencyCSS.css" type="text/css" />
+	</head>
+	<body>
+<!-- DROPMENU -->
+		<header>
+			<div class="row">
+				<div class="columnnav">
+					<div class="dropdown">
+						<button class="dropbtn">Menu</button>
+						<div class="dropdown-content">
+							<a href="../index.html">Home</a>
+							<a href="topic1.html">Topic 1</a>
+							<a href="topic2.html">Topic 2</a>
+							<a href="topic3.html">Topic 3</a>
+							<a href="topic4.html">Topic 4</a>
+							<a href="topic5.html">Topic 5</a>
+							<a href="topic6.html">Topic 6</a>
+							<a href="topic7.html">Topic 7</a>
+							<a href="topic8.html">Topic 8</a>
+							<a href="topic9.html">Topic 9</a>
+							<a href="topic10.html">Topic 10</a>
+							<a href="topic11.html">Topic 11</a>
+							<a href="topic12.html">Topic 12</a>
+							<a href="topic13.html">Topic 13</a>
+						</div>
+					</div>
+				</div>
+				<div class="columnnav">
+					<h1>Topic 10 - <i>HTML5 Tags </i></h1>
+				</div>
+			</div>
+		</header>
+		
+<!-- INDEX -->
+		<main>
+			<div>
+				<h3>INDEX</h3>
+				<ol>
+					<li><a href="#ONE">Video</a>
+						<ul><li><a href="#ONEa">iframe</a></li></ul></li>
+					<li><a href="#TWO">Audio</a></li>
+					<li><a href="#THREE">Canvas</a></li>
+				</ol>
+			</div><hr>
+			
+<!-- EXAMPLE 1 -->
+			<div>
+				<table><a id="ONE"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">1</td>
+						<tr>
+							<td class="TDdef" colspan="2"><b><i>Video</i></b> : Inserting a video file into HTML.<hr class="red"></td>
+							<td class="TDcode" rowspan="3"><b>HTML CODE</b><br><br>
+															&ltvideo width="350" controls&gt <br>
+															&ltsource src="../images/TheHunterDay.mov" type="video/quicktime"&gt <br>
+															&lt/video&gt
+															</td>
+															
+						</tr>
+						<tr>
+							<td>
+								<video width="350" controls>
+									<source src="../images/TheHunterDay.mov" type="video/quicktime">
+								</video></div></td>
+							<td>The <b>&ltvideo&gt</b> tag inserts a video file that's saved within the website's own database. Must include the <b>controls</b> tagline to use any of the interactive controls. By default, the size of the video will be whatever its pixel dimensions are. To resize this, set the width within the tagline.</td>
+						</tr>
+					</tr>
+					<tr>
+						<td colspan="3">( <i>Fun Fact: This video is an art proposal I designed for the University of Wisconsin, entitled "The Hunter"</i> )</td>
+					</tr>
+					</tbody>
+				</table>
+			</div><hr class="red">
+			
+<!-- EXAMPLE 1a -->
+			<div>
+				<table><a id="ONEa"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">1.1</td>
+						<tr>
+							<td class="TDdef" colspan="2"><b><i>iframe</i></b> : Same concept, but this takes a video from another website and embeds it into the website.<br>(Video taken from YouTube: <a href="https://youtu.be/B7T4f9nkAFM">see it here</a>)<hr class="red"></td>
+							<td class="TDcode" rowspan="3"><b>HTML CODE</b><br><br>
+															&ltiframe width="350" src="https://www.youtube.com/embed/B7T4f9nkAFM?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt/iframe&gt
+															</td>
+															
+						</tr>
+						<tr>
+							<td>
+								<iframe width="350" height="200" src="https://www.youtube.com/embed/B7T4f9nkAFM?controls=0" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></td>
+							<td>The <b>&ltiframe&gt</b> tag links a video from another website, a popular choice being YouTube. However, the link may not always work, or the video could get pulled from YouTube, potentially leaving the video unavailable.</td>
+						</tr>
+					</tr>
+					<tr>
+						<td colspan="3">( <i>Can easily be obtained from YouTube videos by clicking Share > Embed > Copy</i> )</td>
+					</tr>
+					</tbody>
+				</table>
+			</div><hr>
+
+<!-- EXAMPLE 2 -->
+			<div>
+				<table><a id="TWO"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">2</td>
+						<tr>
+							<td class="TDdef" colspan="2"><b><i>Audio</i></b> : Inserts a tab similar for interacting with a video, but without a screen. This is just for playing sounds / music.</td>
+							<td class="TDcode" rowspan="3"><b>HTML CODE</b><br><br>
+															&ltaudio controls&gt&ltsource src="../images/dialup.mp3" type="audio/mpeg"&gt&lt/audio&gt
+															</td>
+															
+						</tr>
+						<tr>
+							<td>
+								<audio controls>
+									<source src="../images/dialup.mp3" type="audio/mpeg">
+								</audio></div></td>
+							<td>The <b>&ltaudio&gt</b> tag here plays the audio file that is included in the website's own database. Must include "controls" in the tag. All of the details take care of themselves, such as Play controls, the length of the sound, and volume control.</td>
+						</tr>
+					</tr>
+					</tbody>
+				</table>
+			</div><hr>
+
+<!-- EXAMPLE 3 -->
+			<div>
+				<table><a id="THREE"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">3</td>
+						<tr>
+							<td class="TDdef" colspan="2"><b><i>Canvas</i></b> : Inserts a space for colored areas using JavaScript.</td>
+							<td class="TDcode" rowspan="3"><b>HTML CODE</b><br><br>
+																&ltcanvas id="canvasEx"&gt&lt/canvas&gt
+																<br><br>
+															<b>JAVASCRIPT CODE</b><br><br>
+																var c = document.getElementById("canvasEx");<br>
+																var ctx = c.getContext("2d");<br>
+																ctx.rotate(20 * Math.PI / 180);<br>
+																ctx.shadowBlur = 10;<br>
+																ctx.shadowColor = "black";<br>
+																ctx.fillStyle = "#FF0000";<br>
+																ctx.fillRect(60, 0, 150, 50);
+															</td>
+															
+						</tr>
+						<tr>
+							<td class="TDjs">
+								<canvas id="canvasEx"></canvas></div></td>
+							<td>The <b>&ltcanvas&gt</b> tag inserts a space for JavaScipt to draw shapes, insert images, or otherwise create content, but must include JavaScript.<br>
+							<b>ctx.rotate</b> : rotates the object<br>
+							<b>ctx.shadowBlur</b> : creates a shadow blur<br>
+							<b>ctx.shadowColor</b> : defines the shadow color<br>
+							<b>ctx.fillStyle</b> : defines the object color<br>
+							<b>ctx.fillRect</b> : defines the (x, y, width, height)
+							</td>
+						</tr>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			
+		</main>
+<!-- END OF THE LINE -->
+	<footer>
+        <p>&copy;2019 David Olsen - CIT261, <a href="http://www.byui.edu/online">BYU-Idaho Online</a></p>
+	</footer>
+		<script>
+			var c = document.getElementById("canvasEx");
+			var ctx = c.getContext("2d");
+			ctx.rotate(20 * Math.PI / 180);
+			ctx.shadowBlur = 10;
+			ctx.shadowColor = "black";
+			ctx.fillStyle = "#FF0000";
+			ctx.fillRect(60, 0, 150, 50);
+		</script>
+		<script src="../css/dropmenu.js"></script>
+	</body>
+</html>

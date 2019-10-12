@@ -5,7 +5,7 @@
 /* General Rules */
 html {
 	padding: 10px;
-	background-color: #BDBDBD; }
+	background-color: rgb(210,210,210); }
 header, main, footer {
 	background-color: #ffffff;
 	border: inset #c0220b;
@@ -39,6 +39,8 @@ p, ul, ol, a, td, button {
 	clear: both; }
 li a, i { 
 	color: red; }
+a {
+	font-size: 1.4em; }
 li { 
 	font-size: .9em; }
 td { 
@@ -51,19 +53,17 @@ td {
 .TDdef {
 	width: 100%; }
 .TDjs {
-	z-index:0;
+	z-index: 0;
 	display: grid;
 	justify-content: center;
 	min-width: 160px;
-	max-width: 200px;
-	min-height: 120px;
-	height: auto;
+	padding: 10px;
 	border: solid 2px black; }
 .TDjs p {
 	text-align: center; }
 .TDcode {
 	text-align: left; 
-	font-size: .45em; 
+	font-size: .35em; 
 	border: solid 2px black; 
 	font-family: Verdana, Geneva, sans-serif; 
 	min-width: 150px; }
@@ -201,6 +201,12 @@ button:hover {
 	70%   {left:160px; top:50px; transform: rotate(181deg);}
 	90%   {left:160px; top:50px; transform: scale(2);}
 	100%  {left:0px; top:0px; transform: rotate(0deg); transform: scale(1); transform: skew(0deg);}}
+
+
+
+
+
+
 
 
 /* NAVIGATION BAR LOCKED TO TOP */
