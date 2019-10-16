@@ -3,7 +3,6 @@
 // Comments are helpful guides within the code, and offer no susbstance to the code imbedded. They are made using double-slashes, but only apply to the line on which it is written. Even if word-wrap is enabled, this comment still only shows up on line 3.
 
 // #1 Loops
-
 	// for
 		function for1() {
 			document.getElementById("pID1aa").innerHTML = "''99 Bottles Song''<hr class='red'>";
@@ -31,7 +30,6 @@
 		}
 	
 	// for/of
-
 			var sneks = ['Nagini', 'Watsina', 'Lizzy'];
 			var s;
 			function forOf1() {
@@ -50,7 +48,6 @@
 		document.write("<br>You may want to refresh the page...");
 		}
 	
-	
 	// while
 		function while1() {
 			var x = 1;
@@ -61,7 +58,6 @@
 			}
 			document.getElementById("buttonID1d").style = "display:none;";
 		}
-	
 	
 	// do/while
 		function doWhile1() {
@@ -75,11 +71,6 @@
 			document.getElementById("pID1e").innerHTML = text;
 			document.getElementById("buttonID1e").style = "display:none;";
 		}
-
-
-
-
-		
 
 // #2 Conditional Statements
 		function function2() {

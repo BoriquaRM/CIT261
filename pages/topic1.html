@@ -84,7 +84,7 @@
 					</tr>
 					<tr>
 						<td class="TDjs"><button id="buttonID1a" onclick="for1()">For</button><p id="pID1aa"></p><br><p id="pID1a"></p><p id="pID1ab"></p></td>
-						<td>This <b>for</b> loop runs a functions, as long as the conditions remain true. The variable x begins at 99, runs as long as it is greater than 96, and decreases once the function finishes.<br><br>To include the decreased variable in the same function operation, I added [x-1] to update the <b>x</b> variable, and begin with it in the next iteration.</td>
+						<td>This <b>for</b> loop runs a function, as long as the conditions remain true. The variable x begins at 99, runs as long as it is greater than 96, and decreases once the function finishes.<br><br>To include the decreased variable in the same function operation, I added [x-1] to update the <b>x</b> variable, and begin with it in the next iteration.</td>
 					</tr>
 				</tr>
 				<tr>
@@ -163,7 +163,7 @@
 						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
 														function while1() {<br>
 															var x = 0;<br>
-															while(x < 4) {<br>
+															while(x < 8) {<br>
 																var showLoop = document.getElementById('pID1');<br>
 																showLoop.innerHTML += "Loop " + x + "." + "&ltbr&gt";<br>
 																x++;<br>
@@ -173,7 +173,7 @@
 					</tr>
 					<tr>
 						<td class="TDjs"><button id="buttonID1d" onclick="while1()">While</button><br><p id="pID1d"></p></td>
-						<td>This loop has a limit of 4, then terminates. It uses the "while" tag, indicating that while x < 4, it will continue running the function.<br><br>To ensure that the function does not repeat, the button is disabled once finished. Since JS considers "0" as the first number, so counts it as #1.</td>
+						<td>This loop has a limit of 8, then terminates. It uses the "while" tag, indicating that while x < 4, it will continue running the function.<br><br>To ensure that the function does not repeat, the button is disabled once finished. Since JS considers "0" as the first number, so counts it as #1.</td>
 					</tr>
 				</tr>
 				</tbody>
@@ -201,7 +201,7 @@
 					</tr>
 					<tr>
 						<td class="TDjs"><button id="buttonID1e" onclick="doWhile1()">Do / While</button><br><p id="pID1e"></p></td>
-						<td>This loop has...</td>
+						<td>A similar approach to the <b>for</b> function, in that it will continue to run a function while a certain set of conditions are true. In this case it "does" something "while" i is greater than 6.</td>
 					</tr>
 				</tr>
 				</tbody>
