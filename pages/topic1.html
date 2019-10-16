@@ -41,7 +41,13 @@
 			<div>
 				<h3>INDEX</h3>
 				<ol>
-					<li><a href="#ONE">Loops</a></li>
+					<li><a href="#ONEa">Loops</a><ul>
+						<li><a href="#ONEa">for</a></li>
+						<li><a href="#ONEb">for / in</a></li>
+						<li><a href="#ONEc">for / of</a></li>
+						<li><a href="#ONEd">while</a></li>
+						<li><a href="#ONEe">do / while</a></li>
+						</ul></li>
 					<li><a href="#TWO">Conditional Statements</a></li>
 					<li><a href="#THREE">Functions</a></li>
 					<li><a href="#FOUR">Variables</a></li>
@@ -53,26 +59,149 @@
 			
 <!-- TOPICS -->
 <!-- #1 LOOPS -->
-			<table><a id="ONE"></a>
+<!-- for -->
+			<table><a id="ONEa"></a>
 				<tbody>
 				<tr>
-					<td class="TDnumber" rowspan="3">1</td>
+					<td class="TDnumber" rowspan="3">1.1</td>
 					<tr>
-						<td class="TDdef" colspan="2"><b><i>Loops</i></b> : Repeatedly runs a block of code, until a specific condition is met. Uses <b>for</b>, <b>for/in</b>, <b>while</b> and <b>do/while</b>. Loops are considered the most basic of JS applications.<hr class="red"></td>
+						<td class="TDdef" colspan="2"><b><i>Loops</i></b> : Repeatedly runs a block of code, until a specific condition is met. Uses <b>for</b>, <b>for/in</b>, <b>while</b> and <b>do/while</b>. Loops are considered the most basic of JS applications.<hr class="red"><br>
+						
+						<b><i>for</i></b> : loops through a block of code a set number of times, often utilizing an increasing/decreasing tag such as <b>i++</b> or <b>i--</b>.<hr class="red"></td>
 						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
-														function loopFun() {<br>
-															var x = 0;<br>
-															while(x < 4) {<br>
-																var showLoop = document.getElementById('loopID');<br>
-																showLoop.innerHTML += "Loop " + x + "." + "<br>";<br>
-																i++;<br>
-															}<br>
-															document.getElementById("buttonLoopID").style = "showLoop:none;";<br>
-															}</td>
+								function for1() {<br>
+									document.getElementById("pID1aa").innerHTML = "99 Bottles Song";<br>
+									var content = "";<br>
+									var x;<br>
+									for (x = 99; x > 96; x--) {<br>
+										content += "&ltb&gt" + x + "&lt/b&gt bottles of beer on the wall,&ltbr&gt&ltb&gt" + x + "&lt/b> bottles of beer!&ltbr&gtTake one down, pass it around,&ltbr&gt&lti&gt" + [x-1] + "&lt/i&gt bottles of beer on the wall!&ltbr&gt";<br>
+										document.getElementById("pID1a").innerHTML = content;<br>
+									}<br>
+									document.getElementById("buttonID1a").style = "display:none;";<br>
+									document.getElementById("pID1ab").innerHTML = "And so on...";<br>
+								}<br>
+														</td>
 					</tr>
 					<tr>
-						<td class="TDjs"><button id="buttonID1" onclick="function1()">4 Loops</button><br><p id="pID1"></p></td>
+						<td class="TDjs"><button id="buttonID1a" onclick="for1()">For</button><p id="pID1aa"></p><br><p id="pID1a"></p><p id="pID1ab"></p></td>
+						<td>This <b>for</b> loop runs a functions, as long as the conditions remain true. The variable x begins at 99, runs as long as it is greater than 96, and decreases once the function finishes.<br><br>To include the decreased variable in the same function operation, I added [x-1] to update the <b>x</b> variable, and begin with it in the next iteration.</td>
+					</tr>
+				</tr>
+				<tr>
+						<td colspan="3">( <i>I'm pretty proud of this one</i> )</td>
+					</tr>
+				</tbody>
+			</table><hr class="red">
+<!-- for/in -->
+			<table><a id="ONEb"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">1.2</td>
+					<tr>
+						<td class="TDdef" colspan="2"><b><i>for/in</i></b> : loops through the properties of an object.<hr class="red"></td>
+						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
+								function forIn1() {<br>
+									var content = "";<br>
+									var person = {name1: "David", name2: "Olsen"}; <br>
+									var age = 33;<br>
+									var x;<br>
+									for (x in person) {<br>
+										content += person[x] + " ";<br>
+										document.getElementById("pID1b").innerHTML = "My name is " + content + ", and I am " + age + " years old.";<br>
+									}<br>
+									document.getElementById("buttonID1b").style = "display:none;";<br>
+								}<br>
+														</td>
+					</tr>
+					<tr>
+						<td class="TDjs"><button id="buttonID1b" onclick="forIn1()">For / In</button><br><p id="pID1b"></p></td>
+						<td>This loop adds a " " between the name variables, so that they can be added into the final result. This way a space does not need to be added to each variable itself.</td>
+					</tr>
+				</tr>
+				</tbody>
+			</table><hr class="red">
+<!-- for/of -->
+			<table><a id="ONEc"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">1.3</td>
+					<tr>
+						<td class="TDdef" colspan="2"><b><i>for/of</i></b> : loops through the values of an iterable object. Lets you loop over data structures that are iterable such as Arrays, Strings, Maps, NodeLists, and more.<hr class="red"></td>
+						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
+								var sneks = ['Nagini', 'Watsina', 'Lizzy'];<br>
+								var s;<br>
+								function forOf1() {<br>
+									for (s of sneks) {<br>
+										document.getElementById("pID1c").innerHTML = sneks + ". But the smallest is " + s + ".";<br>
+									}<br>
+								document.getElementById("buttonID1c").style = "display:none;";<br>
+								}<br>
+								<br><br>
+								function forOf2() {<br>
+									var sneks = ['Nagini', 'Watsina', 'Lizzy'];<br>
+									var x;<br>
+									for (x of sneks) {<br>
+										document.write(x + "<br >");<br>
+									}<br>
+								}<br>
+														</td>
+					</tr>
+					<tr>
+						<td class="TDjs">My snakes are:<button id="buttonID1c" onclick="forOf1()">For / Of</button><br><p id="pID1c"></p></td>
+						<td>This loop shows the array, but singles out the last of the array. The reason for this is because this function requires a <b>document.write</b> tag, which would do <button id="buttonID1c2" onclick="forOf2()">THIS</button></td>
+					</tr>
+				</tr>
+				</tbody>
+			</table><hr class="red">
+<!-- while -->
+			<table><a id="ONEd"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">1.4</td>
+					<tr>
+						<td class="TDdef" colspan="2"><b><i>while</i></b> : loops through a block of code while a specified condition is true<hr class="red"></td>
+						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
+														function while1() {<br>
+															var x = 0;<br>
+															while(x < 4) {<br>
+																var showLoop = document.getElementById('pID1');<br>
+																showLoop.innerHTML += "Loop " + x + "." + "&ltbr&gt";<br>
+																x++;<br>
+															}<br>
+															document.getElementById("buttonID1").style = "display:none;";<br>
+														}</td>
+					</tr>
+					<tr>
+						<td class="TDjs"><button id="buttonID1d" onclick="while1()">While</button><br><p id="pID1d"></p></td>
 						<td>This loop has a limit of 4, then terminates. It uses the "while" tag, indicating that while x < 4, it will continue running the function.<br><br>To ensure that the function does not repeat, the button is disabled once finished. Since JS considers "0" as the first number, so counts it as #1.</td>
+					</tr>
+				</tr>
+				</tbody>
+			</table><hr class="red">
+<!-- do/while -->
+			<table><a id="ONEd"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">1.5</td>
+					<tr>
+						<td class="TDdef" colspan="2"><b><i>do/while</i></b> : loops through a block of code while a specified condition is true.<hr class="red"></td>
+						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
+							function doWhile1() {<br>
+								var text = ""<br>
+								var i = 0;<br>
+								do {<br>
+									text += "The number is " + i + "&ltbr&gt";<br>
+									i++;<br>
+								}<br>
+								while (i < 6);<br>
+								document.getElementById("pID1e").innerHTML = text;<br>
+								document.getElementById("buttonID1e").style = "display:none;";<br>
+							}<br>
+														</td>
+					</tr>
+					<tr>
+						<td class="TDjs"><button id="buttonID1e" onclick="doWhile1()">Do / While</button><br><p id="pID1e"></p></td>
+						<td>This loop has...</td>
 					</tr>
 				</tr>
 				</tbody>

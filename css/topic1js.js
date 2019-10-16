@@ -3,15 +3,83 @@
 // Comments are helpful guides within the code, and offer no susbstance to the code imbedded. They are made using double-slashes, but only apply to the line on which it is written. Even if word-wrap is enabled, this comment still only shows up on line 3.
 
 // #1 Loops
-		function function1() {
-			var x = 0;
-			while(x < 4) {
-				var showLoop = document.getElementById('pID1');
-				showLoop.innerHTML += "Loop " + x + "." + "<br>";
+
+	// for
+		function for1() {
+			document.getElementById("pID1aa").innerHTML = "''99 Bottles Song''<hr class='red'>";
+			var content = "";
+			var x;
+			for (x = 99; x > 96; x--) {
+				content += "<b>" + x + "</b> bottles of beer on the wall,<br><b>" + x + "</b> bottles of beer!<br>Take one down, pass it around,<br><i>" + [x-1] + "</i> bottles of beer on the wall!<br><hr>";
+				document.getElementById("pID1a").innerHTML = content;
+			}
+			document.getElementById("buttonID1a").style = "display:none;";
+			document.getElementById("pID1ab").innerHTML = "And so on...";
+		}
+	
+	// for/in
+		function forIn1() {
+			var content = "";
+			var person = {name1: "David", name2: "Olsen"}; 
+			var age = 33;
+			var x;
+			for (x in person) {
+				content += person[x] + " ";
+				document.getElementById("pID1b").innerHTML = "My name is " + content + ", and I am " + age + " years old.";
+			}
+			document.getElementById("buttonID1b").style = "display:none;";
+		}
+	
+	// for/of
+
+			var sneks = ['Nagini', 'Watsina', 'Lizzy'];
+			var s;
+			function forOf1() {
+				for (s of sneks) {
+					document.getElementById("pID1c").innerHTML = sneks + ". But the smallest is " + s + ".";
+				}
+			document.getElementById("buttonID1c").style = "display:none;";
+		}
+		
+		function forOf2() {
+			var sneks = ['Nagini', 'Watsina', 'Lizzy'];
+			var x;
+			for (x of sneks) {
+				document.write(x + "<br >");
+			}
+		document.write("<br>You may want to refresh the page...");
+		}
+	
+	
+	// while
+		function while1() {
+			var x = 1;
+			while(x < 8) {
+				var showLoop = document.getElementById('pID1d');
+				showLoop.innerHTML += "I can count to " + x + "<br>";
 				x++;
 			}
-			document.getElementById("buttonID1").style = "display:none;";
+			document.getElementById("buttonID1d").style = "display:none;";
 		}
+	
+	
+	// do/while
+		function doWhile1() {
+			var text = ""
+			var i = 0;
+			do {
+				text += "The number is " + i + "<br>";
+				i++;
+			}
+			while (i < 6);
+			document.getElementById("pID1e").innerHTML = text;
+			document.getElementById("buttonID1e").style = "display:none;";
+		}
+
+
+
+
+		
 
 // #2 Conditional Statements
 		function function2() {
