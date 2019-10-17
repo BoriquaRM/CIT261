@@ -57,16 +57,16 @@
 						<td class="TDnumber" rowspan="3">1</td>
 						<tr>
 							<td class="TDdef" colspan="2"><b><i>Color Change</i></b> : Rotates through colors on an animation sequence called <b>@keyframes</b>, after giving the keyframe sequence a unique name. Starts on a 3-second delay.<hr class="red"></td>
-							<td class="TDcode" rowspan="3"><b>CSS CODE</b><br><br>
-															.animate1 {<br>
-																<p style="margin-left:10%">background-color: red;<br>
-																animation-name: <i>example1</i>;<br>
-																animation-duration: 7s;}</p>
-															@keyframes <i>example1</i> {<br>
-																<p style="margin-left:10%">0%   {background-color: red;}<br>
-																25%  {background-color: yellow;}<br>
-																75%  {background-color: blue;}<br>
-																100% {background-color: green;}}</p></td>
+							<td class="TDcode" rowspan="3"><hr class="red"><h1><b>CSS CODE</b></h1><hr class="red"><br>
+									.animate1 {<br>
+										<p style="margin-left:10%">background-color: red;<br>
+										animation-name: <i>example1</i>;<br>
+										animation-duration: 7s;}</p>
+									@keyframes <i>example1</i> {<br>
+										<p style="margin-left:10%">0%   {background-color: red;}<br>
+										25%  {background-color: yellow;}<br>
+										75%  {background-color: blue;}<br>
+										100% {background-color: green;}}</p></td>
 						</tr>
 						<tr>
 							<td class="TDjs"><div class="animate1"><p>This changes color</p></div></td>
@@ -85,22 +85,22 @@
 						<td class="TDnumber" rowspan="3">2</td>
 						<tr>
 							<td class="TDdef" colspan="2"><b><i>Moving the Object</i></b> : This moves the object on a set path of motion, then returns it to its starting point. Uses the <b>animation-iteration-count: 2</b> tag.<hr class="red"></td>
-							<td class="TDcode" rowspan="3"><b>CSS CODE</b><br><br>
-															.animate2 {<br>
-																<p style="margin-left:10%">padding: 10px;<br>
-																background-color: red;<br>
-																position: relative;<br>
-																animation-name: example2;<br>
-																animation-duration: 2s;<br>
-																animation-delay: 9s;<br>
-																animation-iteration-count: 2; }</p>
-															@keyframes example2 {
-																<p style="margin-left:10%">0%   {left:0px; top:0px;}<br>
-																25%  {left:400px; top:0px;}<br>
-																50%  {left:200px; top:200px;}<br>
-																75%  {left:0px; top:-300px;}<br>
-																90%  {left: 0px; top: 50px;}<br>
-																100% {left:0px; top:0px;}}</p></td>
+							<td class="TDcode" rowspan="3"><hr class="red"><h1><b>CSS CODE</b></h1><hr class="red"><br>
+									.animate2 {<br>
+										<p style="margin-left:10%">padding: 10px;<br>
+										background-color: red;<br>
+										position: relative;<br>
+										animation-name: example2;<br>
+										animation-duration: 2s;<br>
+										animation-delay: 9s;<br>
+										animation-iteration-count: 2; }</p>
+									@keyframes example2 {
+										<p style="margin-left:10%">0%   {left:0px; top:0px;}<br>
+										25%  {left:400px; top:0px;}<br>
+										50%  {left:200px; top:200px;}<br>
+										75%  {left:0px; top:-300px;}<br>
+										90%  {left: 0px; top: 50px;}<br>
+										100% {left:0px; top:0px;}}</p></td>
 						</tr>
 						<tr>
 							<td class="TDjs"><div class="animate2"><p>This moves around</p></div></td>
@@ -119,20 +119,20 @@
 						<td class="TDnumber" rowspan="3">3</td>
 						<tr>
 							<td class="TDdef" colspan="2"><b><i>Forever Chain</i></b> : This is a chain of animations that goes on without end. Uses the <b>: infinite</b> tag.<hr class="red"></td>
-							<td class="TDcode" rowspan="3"><b>CSS CODE</b><br><br>
-															.animate3 {<br>
-																<p style="margin-left:10%">padding: 10px;<br>
-																background-color: red;<br>
-																position: relative;<br>
-																animation-name: example3;<br>
-																animation-duration: 3s;<br>
-																animation-iteration-count: infinite;}</p>
-															@keyframes example3 {<br>
-																<p style="margin-left:10%">0%   {left:0px; top:0px; }<br>
-																10%   {left:0px; top:0px;}<br>
-																20%  {left:0px; top:5px; <i>transform: rotate(0deg);</i>}<br>
-																80%  {left:0px; top:50px; <i>transform: rotate(30deg);</i>}<br>
-																100% {left:0px; top:0px;}}</p></td>
+							<td class="TDcode" rowspan="3"><hr class="red"><h1><b>CSS CODE</b></h1><hr class="red"><br>
+									.animate3 {<br>
+										<p style="margin-left:10%">padding: 10px;<br>
+										background-color: red;<br>
+										position: relative;<br>
+										animation-name: example3;<br>
+										animation-duration: 3s;<br>
+										animation-iteration-count: infinite;}</p>
+									@keyframes example3 {<br>
+										<p style="margin-left:10%">0%   {left:0px; top:0px; }<br>
+										10%   {left:0px; top:0px;}<br>
+										20%  {left:0px; top:5px; <i>transform: rotate(0deg);</i>}<br>
+										80%  {left:0px; top:50px; <i>transform: rotate(30deg);</i>}<br>
+										100% {left:0px; top:0px;}}</p></td>
 						</tr>
 						<tr>
 							<td class="TDjs"><div class="animate3"><p>This goes on forever...</p></div></td>
@@ -151,19 +151,19 @@
 						<td class="TDnumber" rowspan="3">4</td>
 						<tr>
 							<td class="TDdef" colspan="2"><b><i>Hover Animation</i></b> : Utilizing the <b>:hover</b> tag to trigger an animation.<hr class="red"></td>
-							<td class="TDcode" rowspan="3"><b>CSS CODE</b><br><br>
-															.animate4 {<br>
-																<p style="margin-left:10%">padding: 10px; <br>
-																background-color: red;}</p>
-															.animate4<i>:hover</i> {<br>
-																<p style="margin-left:10%">position: relative;<br>
-																animation-name: example4;<br>
-																animation-duration: 3s;<br>
-																animation-iteration-count: infinite;}</p>
-															@keyframes example4 {<br>
-																<p style="margin-left:10%">0%   {left:0px; top:0px; }<br>
-																50%   {left:50px; top:0px;}<br>
-																100%  {left:200px; top:5px; transform: rotate(90deg);}}</p></td>
+							<td class="TDcode" rowspan="3"><hr class="red"><h1><b>CSS CODE</b></h1><hr class="red"><br>
+									.animate4 {<br>
+										<p style="margin-left:10%">padding: 10px; <br>
+										background-color: red;}</p>
+									.animate4<i>:hover</i> {<br>
+										<p style="margin-left:10%">position: relative;<br>
+										animation-name: example4;<br>
+										animation-duration: 3s;<br>
+										animation-iteration-count: infinite;}</p>
+									@keyframes example4 {<br>
+										<p style="margin-left:10%">0%   {left:0px; top:0px; }<br>
+										50%   {left:50px; top:0px;}<br>
+										100%  {left:200px; top:5px; transform: rotate(90deg);}}</p></td>
 						</tr>
 						<tr>
 							<td class="TDjs"><div class="animate4"><p>Hover over me!</p></div></td>
@@ -182,20 +182,20 @@
 						<td class="TDnumber" rowspan="3">5</td>
 						<tr>
 							<td class="TDdef" colspan="2"><b><i>Many Examples</i></b> : Utilizing previous tags into a single animation.<hr class="red"></td>
-							<td class="TDcode" rowspan="3"><b>CSS CODE</b><br><br>
-															.animate5 {<br>
-																<p style="margin-left:10%">padding: 10px;<br>
-																background-color: red;<br>
-																position: relative;<br>
-																animation-name: example5;<br>
-																animation-duration: 8s;<br>
-																animation-iteration-count: infinite;}</p>
-															@keyframes example5 {<br>
-																<p style="margin-left:10%">0%   {left:0px; top:0px; }<br>
-																30%   {left:10px; top:-90px; transform: skewX(60deg);}<br>
-																70%   {left:160px; top:50px; transform: rotate(181deg);}<br>
-																90%   {left:160px; top:50px; transform: scale(2);}<br>
-																100%  {left:0px; top:0px; transform: rotate(0deg); transform: scale(1); transform: skew(0deg);}}</p></td>
+							<td class="TDcode" rowspan="3"><hr class="red"><h1><b>CSS CODE</b></h1><hr class="red"><br>
+									.animate5 {<br>
+										<p style="margin-left:10%">padding: 10px;<br>
+										background-color: red;<br>
+										position: relative;<br>
+										animation-name: example5;<br>
+										animation-duration: 8s;<br>
+										animation-iteration-count: infinite;}</p>
+									@keyframes example5 {<br>
+										<p style="margin-left:10%">0%   {left:0px; top:0px; }<br>
+										30%   {left:10px; top:-90px; transform: skewX(60deg);}<br>
+										70%   {left:160px; top:50px; transform: rotate(181deg);}<br>
+										90%   {left:160px; top:50px; transform: scale(2);}<br>
+										100%  {left:0px; top:0px; transform: rotate(0deg); transform: scale(1); transform: skew(0deg);}}</p></td>
 						</tr>
 						<tr>
 							<td class="TDjs"><div class="animate5"><p>I feel sick...</p></div></td>
@@ -209,8 +209,8 @@
 		</main>
 <!-- END OF THE LINE -->
 	<footer>
-        <p>&copy;2019 David Olsen - CIT261, <a href="http://www.byui.edu/online">BYU-Idaho Online</a></p>
+        <p>&copy;2019 David Olsen - CIT261 - <a href="http://www.byui.edu/online">BYU-Idaho Online</a></p>
 	</footer>
-		<script src="../css/dropmenu.js"></script>
+		<script src="../script/dropmenu.js"></script>
 	</body>
 </html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>CIT 261 | Topic 3</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="../css/FluencyCSS.css" type="text/css" />
+	</head>
+	<body>
+<!-- DROPMENU -->
+		<header>
+			<div class="row">
+				<div class="columnnav">
+					<div class="dropdown">
+						<button class="dropbtn">Menu</button>
+						<div class="dropdown-content">
+							<a href="../index.html">Home</a>
+							<a href="topic1.html">Topic 1</a>
+							<a href="topic2.html">Topic 2</a>
+							<a href="topic3.html">Topic 3</a>
+							<a href="topic4.html">Topic 4</a>
+							<a href="topic5.html">Topic 5</a>
+							<a href="topic6.html">Topic 6</a>
+							<a href="topic7.html">Topic 7</a>
+							<a href="topic8.html">Topic 8</a>
+							<a href="topic9.html">Topic 9</a>
+							<a href="topic10.html">Topic 10</a>
+							<a href="topic11.html">Topic 11</a>
+							<a href="topic12.html">Topic 12</a>
+							<a href="topic13.html">Topic 13</a>
+						</div>
+					</div>
+				</div>
+				<div class="columnnav">
+					<h1>Topic 3 - <i>JSON Parse & Stringify</i></h1>
+				</div>
+			</div>
+		</header>
+		
+<!-- INDEX -->
+		<main>
+			<div>
+				<h3>INDEX</h3>
+				<ol>
+					<li><a href="#ONE">Parse</a></li>
+					<li><a href="#TWO">Stringify</a></li>
+				</ol>
+			</div><hr>
+			
+<!-- TOPICS -->
+<!-- PARSE -->
+			<table><a id="ONE"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">1</td>
+					<tr>
+						<td class="TDdef" colspan="2">
+						<b><i>Parse</i></b> : The exchange of data to/from a web server. When receiving data from a web server, the data is always a string.<hr class="red"></td>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
+								var content = <i>'{"name1":"David", "name2":"Olsen", "age":33, "city":"Phoenix", "state":"AZ", "food":"Nachos"}'</i>
+								var obj = JSON.parse(content);
+								document.getElementById("pID1").innerHTML = "Hello, my name is " + obj.name1 + " " + obj.name2 + ", I am " + obj.age + " years old, I live in " + obj.city + ", " + obj.state + ", and my favorite food is " + obj.food + ".";<br>
+														</td>
+					</tr>
+					<tr>
+						<td class="TDjs"><p id="pID1"></p></td>
+						<td>The <b>.parse</b> property allows JavaScript to select from the array of information within the internal JSON code in the variable <i>content</i>. The information is called up within its own hierarchy by placing a period between <b>obj</b> and the information desired.</td>
+					</tr>
+				</tr>
+				</tbody>
+			</table><hr>
+
+<!-- STRINGIFY -->
+			<table><a id="TWO"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">2</td>
+					<tr>
+						<td class="TDdef" colspan="2">
+						<b><i>Stringify</i></b> : Returns JSON information as a string, instead of the values of the properties.<hr class="red"></td>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
+								var obj2 = {"name1":"David", "name2":"Olsen", "age":33, "city":"Phoenix", "state":"AZ", "food":"Nachos"};
+								var myJSON = JSON.stringify(obj2);
+								document.getElementById("pID2").innerHTML = myJSON;</td>
+					</tr>
+					<tr>
+						<td class="TDjs"><p id="pID2"></p></td>
+						<td>The <b>.stringify</b> property takes the entire string of information within the JSON, wihout removing the syntax of property names. This method of displaying information is not recommended.</td>
+					</tr>
+				</tr>
+				</tbody>
+			</table>
+			
+		</main>
+<!-- END OF THE LINE -->
+	<footer>
+        <p>&copy;2019 David Olsen - CIT261 - <a href="http://www.byui.edu/online">BYU-Idaho Online</a></p>
+	</footer>
+		<script src="../css/dropmenu.js"></script>
+		<script src="../script/topic3js.js"></script>
+	</body>
+</html>

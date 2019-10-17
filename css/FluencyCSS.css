@@ -23,7 +23,7 @@ main h1, main h2, main h3 {
 	margin: 0px;
 	font-size: .8em;}
 p, ul, ol, a, td, button {
-	margin: 2px;
+	margin: 5px;
 	font-family: Agency FB, serif; }
 .column, .columnnav {
 	font-size: 1em;
@@ -42,7 +42,7 @@ li a, i {
 	color: red; }
 a {
 	margin: 0px;
-	font-size: 1.4em; }
+	font-size: 1.2em; }
 li { 
 	font-size: .9em; }
 td { 
@@ -58,10 +58,13 @@ td {
 	z-index: 0;
 	display: grid;
 	justify-content: center;
-	min-width: 250px;
+	min-width: 150px;
 	padding: 8px;
 	border: solid 2px black; }
-.TDjs p {
+.TDjs p, .TDjs img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center; }
 .TDcode {
 	text-align: left; 
@@ -69,6 +72,9 @@ td {
 	border: solid 2px black; 
 	font-family: Verdana, Geneva, sans-serif; 
 	min-width: 150px; }
+.TDcode h1 {
+	font-size: 1.7em;
+}
 hr { 
 	border-top: 8px solid black; }
 hr.red {
@@ -78,7 +84,7 @@ table {
 	margin-right: 10px; }
 .active, .inactive, .pending {
 	display: table; 
-	padding-right: 30px;
+	padding: 8px;
 	margin-left: 30px;
 	background-color: green;
 	color: white;}
@@ -89,11 +95,11 @@ table {
 	background-color: yellow;
 	color: black;}
 .active:after {
-	content: "SUBMITTED!!";}
+	content: "[ ACTIVE ]";}
 .inactive:after {
-	content: "Not Active...";}
+	content: "- Not Active -";}
 .pending:after {
-	content: "Pending...";}
+	content: "Work in Progress...";}
 button {
 	font-size: 1.2em;
 	border-radius: 5px 5px 5px 5px;

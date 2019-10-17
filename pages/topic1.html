@@ -68,7 +68,7 @@
 						<td class="TDdef" colspan="2"><b><i>Loops</i></b> : Repeatedly runs a block of code, until a specific condition is met. Uses <b>for</b>, <b>for/in</b>, <b>while</b> and <b>do/while</b>. Loops are considered the most basic of JS applications.<hr class="red"><br>
 						
 						<b><i>for</i></b> : loops through a block of code a set number of times, often utilizing an increasing/decreasing tag such as <b>i++</b> or <b>i--</b>.<hr class="red"></td>
-						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
 								function for1() {<br>
 									document.getElementById("pID1aa").innerHTML = "99 Bottles Song";<br>
 									var content = "";<br>
@@ -99,7 +99,7 @@
 					<td class="TDnumber" rowspan="3">1.2</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>for/in</i></b> : loops through the properties of an object.<hr class="red"></td>
-						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
 								function forIn1() {<br>
 									var content = "";<br>
 									var person = {name1: "David", name2: "Olsen"}; <br>
@@ -127,7 +127,7 @@
 					<td class="TDnumber" rowspan="3">1.3</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>for/of</i></b> : loops through the values of an iterable object. Lets you loop over data structures that are iterable such as Arrays, Strings, Maps, NodeLists, and more.<hr class="red"></td>
-						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
 								var sneks = ['Nagini', 'Watsina', 'Lizzy'];<br>
 								var s;<br>
 								function forOf1() {<br>
@@ -160,16 +160,16 @@
 					<td class="TDnumber" rowspan="3">1.4</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>while</i></b> : loops through a block of code while a specified condition is true<hr class="red"></td>
-						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
-														function while1() {<br>
-															var x = 0;<br>
-															while(x < 8) {<br>
-																var showLoop = document.getElementById('pID1');<br>
-																showLoop.innerHTML += "Loop " + x + "." + "&ltbr&gt";<br>
-																x++;<br>
-															}<br>
-															document.getElementById("buttonID1").style = "display:none;";<br>
-														}</td>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
+								function while1() {<br>
+									var x = 0;<br>
+									while(x < 8) {<br>
+										var showLoop = document.getElementById('pID1');<br>
+										showLoop.innerHTML += "Loop " + x + "." + "&ltbr&gt";<br>
+										x++;<br>
+									}<br>
+									document.getElementById("buttonID1").style = "display:none;";<br>
+								}</td>
 					</tr>
 					<tr>
 						<td class="TDjs"><button id="buttonID1d" onclick="while1()">While</button><br><p id="pID1d"></p></td>
@@ -185,18 +185,18 @@
 					<td class="TDnumber" rowspan="3">1.5</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>do/while</i></b> : loops through a block of code while a specified condition is true.<hr class="red"></td>
-						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
-							function doWhile1() {<br>
-								var text = ""<br>
-								var i = 0;<br>
-								do {<br>
-									text += "The number is " + i + "&ltbr&gt";<br>
-									i++;<br>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
+								function doWhile1() {<br>
+									var text = ""<br>
+									var i = 0;<br>
+									do {<br>
+										text += "The number is " + i + "&ltbr&gt";<br>
+										i++;<br>
+									}<br>
+									while (i < 6);<br>
+									document.getElementById("pID1e").innerHTML = text;<br>
+									document.getElementById("buttonID1e").style = "display:none;";<br>
 								}<br>
-								while (i < 6);<br>
-								document.getElementById("pID1e").innerHTML = text;<br>
-								document.getElementById("buttonID1e").style = "display:none;";<br>
-							}<br>
 														</td>
 					</tr>
 					<tr>
@@ -214,27 +214,27 @@
 					<td class="TDnumber" rowspan="3">2</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>Conditional Statements</i></b> : Executes a block of code if a specified condition is true, or another if false. Also known as <b>If/Else</b> statements.<br>( <i>Similar to "boolean" assignments, which view results as True/False</i> )<hr class="red"></td>
-						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
-														function function2()<br> {
-															var response;<br>
-															var user = prompt("What's your name?");<br>
-															if (confirm && user == "") {
-																response = "Come on, you've gotta have a name.";
-															}
-															else if (user == "asdf" || user == 123) {<br>
-																response = "Dude, '" + user + "' is not a name.";<br>
-															}<br>
-															else if (user == "Yoda") {<br>
-																response = "Mmmm, Jedi master, you are.";<br>
-															} <br>
-															else if (user == null || user == "") {<br>
-																response = "Well fine then...";<br>
-															} <br>
-															else {<br>
-																response = "Hello " + user + "!";<br>
-															}<br>
-															document.getElementById("p2ID").innerHTML = response;
-															}<br></td>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
+								function function2()<br> {
+									var response;<br>
+									var user = prompt("What's your name?");<br>
+									if (confirm && user == "") {
+										response = "Come on, you've gotta have a name.";
+									}
+									else if (user == "asdf" || user == 123) {<br>
+										response = "Dude, '" + user + "' is not a name.";<br>
+									}<br>
+									else if (user == "Yoda") {<br>
+										response = "Mmmm, Jedi master, you are.";<br>
+									} <br>
+									else if (user == null || user == "") {<br>
+										response = "Well fine then...";<br>
+									} <br>
+									else {<br>
+										response = "Hello " + user + "!";<br>
+									}<br>
+									document.getElementById("p2ID").innerHTML = response;
+									}<br></td>
 					</tr>
 					<tr>
 						<td class="TDjs"><button onclick="function2()">Who're you?</button><p id="pID2"></p></td>
@@ -251,27 +251,27 @@
 					<td class="TDnumber" rowspan="3">3</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>Functions</a></i></b> : A block of code designed to perform a particular task when called upon, identified with <b>()</b>.<hr class="red"></td>
-						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
-														//Range of numbers to pick from<br>
-														var pick = {<br>
-															range: 1000,<br>
-															roll: function () {<br>
-																var randomNumber = Math.floor(Math.random() * this.range) + 1;<br>
-																return randomNumber;<br>
-																}<br>
-														}<br>
-														//Shows the number generated<br>
-														function showNumber(number) {<br>
-															var numberResult = document.getElementById('numberResult');<br>
-															numberResult.innerHTML = number;<br>
-														}<br>
-														//Clickable button<br>
-														var button = document.getElementById('button3');<br>
-														//Clicking button runs "function()"<br>
-														button.onclick = function() {<br>
-															var result = pick.roll();<br>
-															showNumber(result);<br>
-														}</td>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
+								//Range of numbers to pick from<br>
+								var pick = {<br>
+									range: 1000,<br>
+									roll: function () {<br>
+										var randomNumber = Math.floor(Math.random() * this.range) + 1;<br>
+										return randomNumber;<br>
+										}<br>
+								}<br>
+								//Shows the number generated<br>
+								function showNumber(number) {<br>
+									var numberResult = document.getElementById('numberResult');<br>
+									numberResult.innerHTML = number;<br>
+								}<br>
+								//Clickable button<br>
+								var button = document.getElementById('button3');<br>
+								//Clicking button runs "function()"<br>
+								button.onclick = function() {<br>
+									var result = pick.roll();<br>
+									showNumber(result);<br>
+								}</td>
 					</tr>
 					<tr>
 						<td class="TDjs"><button id="button3">Random Number Gen<br>( 1 - 1000 )</button><p id="numberResult"></p></td>
@@ -288,8 +288,8 @@
 					<td class="TDnumber" rowspan="3">4</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>Variables</i></b> : A storage location of information, unique to task. Declared by using <b>var =</b>.<hr class="red"></td>
-						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
-														// var a = 5;<br>// var b = "Five";</td>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
+								// var a = 5;<br>// var b = "Five";</td>
 					</tr>
 					<tr>
 						<td class="TDjs">var a = 5;<br>var b = "Five";</td>
@@ -306,7 +306,7 @@
 					<td class="TDnumber" rowspan="3">5</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>Parameters</i></b> : Names listed in the function definition. Functions have () at the end of their name, but variables can be placed inside to define which ones are affected.<hr class="red"></td>
-						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
 													function theAnswer() {<br>
 														function function5(x, y) { <br>
 															return x + y;<br>
@@ -336,12 +336,12 @@
 					<td class="TDnumber" rowspan="3">6</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>Arrays</i></b> : A line of data, separated by commas, identified by <b>[]</b>.<hr class="red"></td>
-						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
-														function array() {<br>
-															var bestThings = ["Sneks", "Chips", "Hot Sauce"];<br>
-															document.getElementById("pID6").innerHTML = bestThings; <br>
-															document.getElementById("buttonID6").style = "display:none;";<br>
-														}</td>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
+								function array() {<br>
+									var bestThings = ["Sneks", "Chips", "Hot Sauce"];<br>
+									document.getElementById("pID6").innerHTML = bestThings; <br>
+									document.getElementById("buttonID6").style = "display:none;";<br>
+								}</td>
 					</tr>
 					<tr>
 						<td class="TDjs"><button onclick="array()" id="buttonID6">Best Things Ever</button><p id="pID6"></p></td>
@@ -358,25 +358,25 @@
 					<td class="TDnumber" rowspan="3">7</td>
 					<tr>
 						<td class="TDdef" colspan="2"><b><i>Associative Arrays</i></b> : Arrays that the user can redefine and update as needed. Combinations incluse <b>.shift</b>, <b>.unshift</b>, <b>.pop</b> and <b>.push</b>.<hr class="red"></td>
-						<td class="TDcode" rowspan="3"><b>JAVASCRIPT CODE</b><br><br>
-														var foodPop = ["Chips", " Salsa", " Nachos", " Cake", " Cookies", " Chocolate"];<br>
-														document.getElementById("pID7a").innerHTML = foodPop;<br>
-														function arrayAssA() {<br>
-															foodPop.pop();<br>
-															document.getElementById("pID7a").innerHTML = foodPop;<br>
-															if (foodPop.length < 1 || foodPop == undefined) {<br>
-																document.getElementById("pID7a").innerHTML = "All gone.";<br>
-															}<br>
-														}<br>
-														var foodShift = ["Chips", " Salsa", " Nachos", " Cake", " Cookies", " Chocolate"];<br>
-														document.getElementById("pID7b").innerHTML = foodShift;<br>
-														function arrayAssB() {<br>
-															foodShift.shift();<br>
-															document.getElementById("pID7b").innerHTML = foodShift;<br>
-															if (foodShift.length < 1 || foodShift == undefined) {<br>
-																document.getElementById("pID7b").innerHTML = "All gone.";<br>
-															}<br>
-														}</td>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
+								var foodPop = ["Chips", " Salsa", " Nachos", " Cake", " Cookies", " Chocolate"];<br>
+								document.getElementById("pID7a").innerHTML = foodPop;<br>
+								function arrayAssA() {<br>
+									foodPop.pop();<br>
+									document.getElementById("pID7a").innerHTML = foodPop;<br>
+									if (foodPop.length < 1 || foodPop == undefined) {<br>
+										document.getElementById("pID7a").innerHTML = "All gone.";<br>
+									}<br>
+								}<br>
+								var foodShift = ["Chips", " Salsa", " Nachos", " Cake", " Cookies", " Chocolate"];<br>
+								document.getElementById("pID7b").innerHTML = foodShift;<br>
+								function arrayAssB() {<br>
+									foodShift.shift();<br>
+									document.getElementById("pID7b").innerHTML = foodShift;<br>
+									if (foodShift.length < 1 || foodShift == undefined) {<br>
+										document.getElementById("pID7b").innerHTML = "All gone.";<br>
+									}<br>
+								}</td>
 					</tr>
 					<tr>
 						<td class="TDjs"><button onclick="arrayAssA()" id="buttonID7a">Eat!</button><p id="pID7a"></p><br><button onclick="arrayAssB()" id="buttonID7b">Eat!</button><p id="pID7b"></p></td>
@@ -388,9 +388,9 @@
 		</main>
 <!-- END OF THE LINE -->
 	<footer>
-        <p>&copy;2019 David Olsen - CIT261, <a href="http://www.byui.edu/online">BYU-Idaho Online</a></p>
+        <p>&copy;2019 David Olsen - CIT261 - <a href="http://www.byui.edu/online">BYU-Idaho Online</a></p>
 	</footer>
 		<script src="../css/dropmenu.js"></script>
-		<script src="../css/topic1js.js"></script>
+		<script src="../script/topic1js.js"></script>
 	</body>
 </html>

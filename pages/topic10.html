@@ -56,7 +56,7 @@
 						<td class="TDnumber" rowspan="3">1</td>
 						<tr>
 							<td class="TDdef" colspan="2"><b><i>Video</i></b> : Inserting a video file into HTML.<hr class="red"></td>
-							<td class="TDcode" rowspan="3"><b>HTML CODE</b><br><br>
+							<td class="TDcode" rowspan="3"><hr class="red"><h1><b>HTML CODE</b></h1><hr class="red"><br>
 															&ltvideo width="350" controls&gt <br>
 															&ltsource src="../images/TheHunterDay.mov" type="video/quicktime"&gt <br>
 															&lt/video&gt
@@ -67,7 +67,7 @@
 							<td>
 								<video width="350" controls>
 									<source src="../images/TheHunterDay.mov" type="video/quicktime">
-								</video></div></td>
+								</video></td>
 							<td>The <b>&ltvideo&gt</b> tag inserts a video file that's saved within the website's own database. Must include the <b>controls</b> tagline to use any of the interactive controls. By default, the size of the video will be whatever its pixel dimensions are. To resize this, set the width within the tagline.</td>
 						</tr>
 					</tr>
@@ -86,14 +86,14 @@
 						<td class="TDnumber" rowspan="3">1.1</td>
 						<tr>
 							<td class="TDdef" colspan="2"><b><i>iframe</i></b> : Same concept, but this takes a video from another website and embeds it into the website.<br>(Video taken from YouTube: <a href="https://youtu.be/B7T4f9nkAFM">see it here</a>)<hr class="red"></td>
-							<td class="TDcode" rowspan="3"><b>HTML CODE</b><br><br>
+							<td class="TDcode" rowspan="3"><hr class="red"><h1><b>HTML CODE</b></h1><hr class="red"><br>
 															&ltiframe width="350" src="https://www.youtube.com/embed/B7T4f9nkAFM?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt/iframe&gt
 															</td>
 															
 						</tr>
 						<tr>
 							<td>
-								<iframe width="350" src="https://www.youtube.com/embed/B7T4f9nkAFM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></td>
+								<iframe width="350" src="https://www.youtube.com/embed/B7T4f9nkAFM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
 							<td>The <b>&ltiframe&gt</b> tag links a video from another website, a popular choice being YouTube. However, the link may not always work, or the video could get pulled from YouTube, potentially leaving the video unavailable.</td>
 						</tr>
 					</tr>
@@ -112,7 +112,7 @@
 						<td class="TDnumber" rowspan="3">2</td>
 						<tr>
 							<td class="TDdef" colspan="2"><b><i>Audio</i></b> : Inserts a tab similar for interacting with a video, but without a screen. This is just for playing sounds / music.</td>
-							<td class="TDcode" rowspan="3"><b>HTML CODE</b><br><br>
+							<td class="TDcode" rowspan="3"><hr class="red"><h1><b>HTML CODE</b></h1><hr class="red"><br>
 															&ltaudio controls&gt&ltsource src="../images/dialup.mp3" type="audio/mpeg"&gt&lt/audio&gt
 															</td>
 															
@@ -121,7 +121,7 @@
 							<td>
 								<audio controls>
 									<source src="../images/dialup.mp3" type="audio/mpeg">
-								</audio></div></td>
+								</audio></td>
 							<td>The <b>&ltaudio&gt</b> tag here plays the audio file that is included in the website's own database. Must include "controls" in the tag. All of the details take care of themselves, such as Play controls, the length of the sound, and volume control.</td>
 						</tr>
 					</tr>
@@ -137,10 +137,10 @@
 						<td class="TDnumber" rowspan="3">3</td>
 						<tr>
 							<td class="TDdef" colspan="2"><b><i>Canvas</i></b> : Inserts a space for colored areas using JavaScript.</td>
-							<td class="TDcode" rowspan="3"><b>HTML CODE</b><br><br>
+							<td class="TDcode" rowspan="3"><hr class="red"><h1><b>HTML CODE</b></h1><hr class="red"><br>
 																&ltcanvas id="canvasEx"&gt&lt/canvas&gt
 																<br><br>
-															<b>JAVASCRIPT CODE</b><br><br>
+															<hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
 																var c = document.getElementById("canvasEx");<br>
 																var ctx = c.getContext("2d");<br>
 																ctx.rotate(20 * Math.PI / 180);<br>
@@ -153,7 +153,7 @@
 						</tr>
 						<tr>
 							<td class="TDjs">
-								<canvas id="canvasEx"></canvas></div></td>
+								<canvas id="canvasEx"></canvas></td>
 							<td>The <b>&ltcanvas&gt</b> tag inserts a space for JavaScipt to draw shapes, insert images, or otherwise create content, but must include JavaScript.<br>
 							<b>ctx.rotate</b> : rotates the object<br>
 							<b>ctx.shadowBlur</b> : creates a shadow blur<br>
@@ -170,7 +170,7 @@
 		</main>
 <!-- END OF THE LINE -->
 	<footer>
-        <p>&copy;2019 David Olsen - CIT261, <a href="http://www.byui.edu/online">BYU-Idaho Online</a></p>
+        <p>&copy;2019 David Olsen - CIT261 - <a href="http://www.byui.edu/online">BYU-Idaho Online</a></p>
 	</footer>
 		<script>
 			var c = document.getElementById("canvasEx");
@@ -181,6 +181,6 @@
 			ctx.fillStyle = "#FF0000";
 			ctx.fillRect(60, 0, 150, 50);
 		</script>
-		<script src="../css/dropmenu.js"></script>
+		<script src="../script/dropmenu.js"></script>
 	</body>
 </html>

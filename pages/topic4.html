@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>CIT 261 | Topic 4</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="../css/FluencyCSS.css" type="text/css" />
+	</head>
+	<body>
+<!-- DROPMENU -->
+		<header>
+			<div class="row">
+				<div class="columnnav">
+					<div class="dropdown">
+						<button class="dropbtn">Menu</button>
+						<div class="dropdown-content">
+							<a href="../index.html">Home</a>
+							<a href="topic1.html">Topic 1</a>
+							<a href="topic2.html">Topic 2</a>
+							<a href="topic3.html">Topic 3</a>
+							<a href="topic4.html">Topic 4</a>
+							<a href="topic5.html">Topic 5</a>
+							<a href="topic6.html">Topic 6</a>
+							<a href="topic7.html">Topic 7</a>
+							<a href="topic8.html">Topic 8</a>
+							<a href="topic9.html">Topic 9</a>
+							<a href="topic10.html">Topic 10</a>
+							<a href="topic11.html">Topic 11</a>
+							<a href="topic12.html">Topic 12</a>
+							<a href="topic13.html">Topic 13</a>
+						</div>
+					</div>
+				</div>
+				<div class="columnnav">
+					<h1>Topic 4 - <i>XMLHTTP Request: JSON</i></h1>
+				</div>
+			</div>
+		</header>
+		
+<!-- INDEX -->
+		<main>
+			<div>
+				<h3>INDEX</h3>
+				<ol>
+					<li><a href="#ONE">XMLHTTP Request: JSON</a>
+				</ol>
+			</div><hr>
+
+<!-- TOPICS -->			
+<!-- EXAMPLE 1 -->
+			<div>
+				<table><a id="ONE"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">1</td>
+						<tr>
+							<td class="TDdef" colspan="2">
+							<b><i>JSON</i></b> : An advanced array of information that can be updated and called upon to show up on the HTML page, all without changing any actual HTML code. Very useful for displaying information that gets regular updates/additions.<hr class="red">
+							<b><i>XMLHTTP Request</i></b> : The command to bring up the intended JSON file. This JSON file may not be one that the user can manipulate, but call still be called up.<hr class="red"></td>
+							<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
+									/*Request API with CITYID*/
+										let weatherRequest = new XMLHttpRequest();
+										let apiURLstring = 'https://api.openweathermap.org/data/2.5/weather?id=5308655&units=imperial&APPID=XXXXXXXXXXXXXXXXXXXXX';
+												<br><i>// DO NOT USE MY ID!!!</i>
+										weatherRequest.open('Get', apiURLstring, true);
+										weatherRequest.send();<br><br>
+
+										weatherRequest.onload = function() {
+											let weatherData = JSON.parse(weatherRequest.responseText);
+											console.log(weatherData);
+
+											/*Temps, Humidity, Wind Speed*/
+											/*This picks out the various temperature readings under the .main array*/
+												document.getElementById('cc-temp').innerHTML = weatherData.main.temp.toFixed(0) + "&deg;F";
+												document.getElementById('cc-lowtemp').innerHTML = weatherData.main.temp_min.toFixed(0);
+												document.getElementById('cc-hightemp').innerHTML = weatherData.main.temp_max.toFixed(0) + "&deg;F";
+												document.getElementById('cc-humidity').innerHTML = weatherData.main.humidity + "%";
+												document.getElementById('cc-windspeed').innerHTML = weatherData.wind.speed.toFixed(0) + " mph";
+											/*Description of weather*/
+											/*This selects the 'description' of the sky, under the .weather array*/
+												document.getElementById('cc-desc').innerHTML = weatherData.weather[0].description;
+											/*Weather Icon*/
+											/*This picks out a premade icon on the JSON to reflect a visual for the weather description*/
+												let icon = "http://openweathermap.org/img/w/" + weatherData.weather[0].icon + ".png";
+												let desc = weatherData.weather[0].description;
+												document.getElementById('cc-img').setAttribute('src', icon);
+												document.getElementById('cc-img').setAttribute('alt', desc);
+												document.getElementById('cc-img').setAttribute('title', desc);
+										}</td>
+															
+						</tr>
+						<tr>
+							<td class="TDjs">
+								<h3><i>Current Temp</i></h3>
+								<p id="cc-temp"></p><br>
+								<p id="cc-desc"></p><br>
+								<img id="cc-img" src="placeholder" alt="weather"/><br>
+								<table>
+									<tr>
+										<td>Low/High: </td>
+										<td><span id="cc-lowtemp"></span> - <span id="cc-hightemp"></span></td>
+									</tr>
+									<tr>
+										<td>Humidity: </td>
+										<td><span id="cc-humidity"></span></td>
+									</tr>
+									<tr>
+										<td>Wind Speed: </td>
+										<td><span id="cc-windspeed"></span></td>
+									</tr>
+								</table>
+							</td>
+							<td>This is an advanced way of bringing up information that exists somewhere else on the web. The designer can make their own JSON file, and update it as needed, but there are often free resources such as <a href="https://www.openweathermap.org">openweathermap.org</a> that allow people to call up their weather JSON files after signing up. A custom ID is required to do so, and must not be used with multiple sites/functions at a time, else the ID will be disabled.<br><br>This example shows the current weather in Phoenix, AZ, as well as other insights.</td>
+						</tr>
+					</tr>
+					<tr>
+						<td colspan="3">( <i>No button needed here, the information is automatically called up once the page loads</i> )</td>
+					</tr>
+					</tbody>
+				</table>
+			</div><hr>
+			
+		</main>
+<!-- END OF THE LINE -->
+	<footer>
+        <p>&copy;2019 David Olsen - CIT261 - <a href="http://www.byui.edu/online">BYU-Idaho Online</a><br>
+		(API information taken from <a href="https://www.openweathermap.org">openweathermap.org</a>)</p>
+	</footer>
+		<script src="../script/topic4API.js"></script>
+		<script src="../script/dropmenu.js"></script>
+	</body>
+</html>
