@@ -95,9 +95,9 @@ table {
 	background-color: yellow;
 	color: black;}
 .active:after {
-	content: "[ ACTIVE ]";}
+	content: "[ACTIVE]";}
 .inactive:after {
-	content: "- Not Active -";}
+	content: "[Inactive]";}
 .pending:after {
 	content: "Work in Progress...";}
 button {
