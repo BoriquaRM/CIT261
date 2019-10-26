@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>CIT 261 | Topic 2</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="../css/FluencyCSS.css" type="text/css" />
+	</head>
+	<body>
+<!-- DROPMENU -->
+		<header>
+			<div class="row">
+				<div class="columnnav">
+					<div class="dropdown">
+						<button class="dropbtn">Menu</button>
+						<div class="dropdown-content">
+							<a href="../index.html">Home</a>
+							<a href="topic1.html">Topic 1</a>
+							<a href="topic2.html">Topic 2</a>
+							<a href="topic3.html">Topic 3</a>
+							<a href="topic4.html">Topic 4</a>
+							<a href="topic5.html">Topic 5</a>
+							<a href="topic6.html">Topic 6</a>
+							<a href="topic7.html">Topic 7</a>
+							<a href="topic8.html">Topic 8</a>
+							<a href="topic9.html">Topic 9</a>
+							<a href="topic10.html">Topic 10</a>
+							<a href="topic11.html">Topic 11</a>
+							<a href="topic12.html">Topic 12</a>
+							<a href="topic13.html">Topic 13</a>
+						</div>
+					</div>
+				</div>
+				<div class="columnnav">
+					<h1>Topic 2 - <i>Javascript : 102</i></h1>
+				</div>
+			</div>
+		</header>
+		
+<!-- INDEX -->
+		<main>
+			<div>
+				<h3>INDEX</h3>
+				<ol>
+					<li><a href="#ONE">Object Creation</a></li>
+					<li><a href="#TWO">Inheritance</a></li>
+					<li><a href="#THREE">Properties</a></li>
+					<li><a href="#FOUR">Methods</a></li>
+				</ol>
+			</div><hr>
+			
+<!-- TOPICS -->
+<!-- Object -->
+			<table><a id="ONE"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">1</td>
+					<tr>
+						<td class="TDdef" colspan="2">
+						<b><i>Object Creation</i></b> : The legs by which JavaScript stands. Variables, functions, properties, etc. all have to do with creating an object, or something for the user to see.<hr class="red"></td>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
+								function objFunction() {
+									var user = {
+										fName : String(document.getElementById("fName").value),
+										lName : String(document.getElementById("lName").value),
+										age : String(document.getElementById("age").value),
+										food : String(document.getElementById("food").value),
+										allName : function() { 
+											return this.fName + " " + this.lName; 
+										}
+									}
+									document.getElementById("pID1").innerHTML = user.allName() + " is " + user.age + " years old, and enjoys eating " + user.food + ".";
+								}</td>
+					</tr>
+					<tr>
+						<td class="TDjs">
+								First Name: <input type="text" size="4" id="fName"><br>
+								Last Name: <input type="text" size="4" id="lName"><br>
+								Age: <input type="text" size="4" id="age"><br>
+								Favorite Food: <input type="text" size="10" id="food">
+								<button id="buttonID1" onclick="objFunction()">Click Me</button>
+						<p id="pID1"></p></td>
+						<td>The object created here is the <b>.innerHTML =</b> portion of JS, where these variables are applied into a result, meaning, the object.</td>
+					</tr>
+				</tr>
+				</tbody>
+			</table><hr>
+
+<!-- Inheritance -->
+			<table><a id="TWO"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">2</td>
+					<tr>
+						<td class="TDdef" colspan="2">
+						<b><i>Inheritance</i></b> : the application of variables, and the values associated with them.<hr class="red"></td>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
+								function inheritanceFunction() {
+									var user = new Object();
+									user.first = document.getElementById("name1").value;
+									user.last = document.getElementById("name2").value;
+									document.getElementById("pID2").innerHTML = "Hello " + user.first + " " + user.last + ".";
+								}</td>
+					</tr>
+					<tr>
+						<td class="TDjs">
+								First Name: <input type="text" size="4" id="name1"><br>
+								Last Name: <input type="text" size="4" id="name2"><br>
+								<button id="buttonID2" onclick="inheritanceFunction()">Click Me</button>
+						<p id="pID2"></p></td>
+						<td>Like with normal object creation, this takes the variables inside the JS code, and applies them to a result. They inherit a value, and express it when called upon.</td>
+					</tr>
+				</tr>
+				</tbody>
+			</table><hr>
+			
+<!-- Properties -->
+			<table><a id="THREE"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">3</td>
+					<tr>
+						<td class="TDdef" colspan="2">
+						<b><i>Properties</i></b> : are the values given to variables, either as numbers or strings.<hr class="red"></td>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
+								user.first = "Charley";<br>
+								user.last = "the Unicorn";</td>
+					</tr>
+					<tr>
+						<td class="TDjs">user.first = "Charley";<br>user.last = "the Unicorn";<p id="pID3"></p></td>
+						<td>When identifying a property in JS, it is called up by naming the variable. In some cases, it is identified in the code itself, or offers the user a chance to submit their own property.</td>
+					</tr>
+				</tr>
+				</tbody>
+			</table><hr>
+			
+<!-- Methods -->
+			<table><a id="FOUR"></a>
+				<tbody>
+				<tr>
+					<td class="TDnumber" rowspan="3">4</td>
+					<tr>
+						<td class="TDdef" colspan="2">
+						<b><i>Methods</i></b> : The manner in which a result is achieved. Calling up properties/values in  a certain way, depending on the needs of the function.<hr class="red"></td>
+						<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
+								function methodFunction1() {
+									var user = new Object();
+									user.first = "Charley";
+									user.last = "the Unicorn";
+									document.getElementById("pID4a").innerHTML = "Hello " + user.first + " " + user.last + " 1.";
+								}<br>
+								function methodFunction2() {
+									var user = new Object();
+									user.first = "Charley";
+									user.last = "the Unicorn";
+									document.getElementById("pID4b").innerHTML = "Hello " + user["first"] + " " + user["last"] + " 2.";
+								}</td>
+					</tr>
+					<tr>
+						<td class="TDjs">
+							<button id="buttonID4a" type="button" onclick="methodFunction1()">Click Me</button>
+						<p id="pID4a"></p><br>
+							<button id="buttonID4b" type="button" onclick="methodFunction2()">Click Me</button>
+						<p id="pID4b"></p></td>
+						<td>In the example of properties, the same code is used, but is called upon in a different manner. Instead of using <b>.property</b>, it uses <b>["property"]</b>.</td>
+					</tr>
+				</tr>
+				<tr>
+						<td colspan="3">( <i>Typically, the <b>.property</b> style is the most commonly used</i> )</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</main>
+<!-- END OF THE LINE -->
+	<footer>
+        <p>&copy;2019 David Olsen - CIT261 - <a href="http://www.byui.edu/online">BYU-Idaho Online</a></p>
+	</footer>
+		<script src="../css/dropmenu.js"></script>
+		<script src="../script/topic2js.js"></script>
+	</body>
+</html>
