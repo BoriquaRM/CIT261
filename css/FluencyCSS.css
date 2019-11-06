@@ -99,12 +99,12 @@ table {
 .inactive:after {
 	content: "[Inactive]";}
 .pending:after {
-	content: "Work in Progress...";}
+	content: "[Pending...]";}
 button {
-	font-size: 1.2em;
+	font-size: 1em;
 	border-radius: 5px 5px 5px 5px;
 	padding: inherit;
-	display: grid;
+	display: flex;
 	align-items: center;
 	justify-content: center; }
 button:hover {
