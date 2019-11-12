@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>CIT 261 | Topic 7</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="../css/FluencyCSS.css" type="text/css" />
+	</head>
+	<body>
+<!-- DROPMENU -->
+		<header>
+			<div class="row">
+				<div class="columnnav">
+					<div class="dropdown">
+						<button class="dropbtn">Menu</button>
+						<div class="dropdown-content">
+							<a href="../index.html">Home</a>
+							<a href="topic1.html">Topic 1</a>
+							<a href="topic2.html">Topic 2</a>
+							<a href="topic3.html">Topic 3</a>
+							<a href="topic4.html">Topic 4</a>
+							<a href="topic5.html">Topic 5</a>
+							<a href="topic6.html">Topic 6</a>
+							<a href="topic7.html">Topic 7</a>
+							<a href="topic8.html">Topic 8</a>
+							<a href="topic9.html">Topic 9</a>
+							<a href="topic10.html">Topic 10</a>
+							<a href="topic11.html">Topic 11</a>
+							<a href="topic12.html">Topic 12</a>
+							<a href="topic13.html">Topic 13</a>
+						</div>
+					</div>
+				</div>
+				<div class="columnnav">
+					<h1>Topic 7 - <i>Editing CSS Properties Using JS</i></h1>
+				</div>
+			</div>
+		</header>
+		
+<!-- INDEX -->
+		<main>
+			<div>
+				<h3>INDEX</h3>
+				<ol>
+					<li><a href="#ONE">Manipulate CSS with JS</a></li>
+				</ol>
+			</div><hr>
+			
+<!-- EXAMPLE 1 -->
+			<div>
+				<table><a id="ONE"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">1</td>
+						<tr>
+							<td class="TDdef" colspan="2"><b><i>Manipulate CSS with JS</i></b> : Instead of setting an absolute CSS value to objects, they can be manipulated by JavaScript.<hr class="red"></td>
+							<td class="TDcode" rowspan="3"><hr class="red"><h1><b>CSS CODE</b></h1><hr class="red"><br>
+								function mouseOn() {
+									document.getElementById("imgTDjs").style.border = "2px solid red";
+								}
+								function mouseOff() {
+									document.getElementById("imgTDjs").style.border = "none";
+								}
+
+								function changeSize() {
+									document.getElementById("imgTDjs").style.width = "180%";
+								}
+
+								function changeBorder() {
+									document.getElementById("imgTDjs").style.borderRadius = "50px";
+								}
+
+								function normal() {
+									document.getElementById("imgTDjs").style.width = "77%"
+									document.getElementById("imgTDjs").style.border = "none"
+									document.getElementById("imgTDjs").style.borderRadius = "0px";
+								}</td>
+						</tr>
+						<tr>
+							<td class="TDjs" style="background-color: grey">
+								<button id="thisButton" class="myButtons" type="button" onclick="changeSize()">Make the image larger</button>
+								<button class="myButtons" type="button" onclick="changeBorder()">Add border radius</button>
+								<button class="myButtons" type="button" onclick="normal()">Return to normal</button>
+								<img id="imgTDjs" src="../images/myface.png" onmouseout="mouseOff()" onmouseover="mouseOn()" alt="Archway" >
+							</td>
+							<td>The image here can be manipulated by the buttons provided. The property values in CSS are altered to change the size, borders, and whatever else may be desired.<br><br>This can also apply to a mouse-over. It changes the properties when hovering over, and hovering off.</td>
+						</tr>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</main>
+<!-- END OF THE LINE -->
+	<footer>
+        <p>&copy;2019 David Olsen - CIT261 - <a href="http://www.byui.edu/online">BYU-Idaho Online</a></p>
+	</footer>
+		<script src="../script/topic7js.js"></script>
+		<script src="../script/dropmenu.js"></script>
+	</body>
+</html>

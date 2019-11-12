@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>CIT 261 | Topic 5</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="../css/FluencyCSS.css" type="text/css" />
+	</head>
+	<body>
+<!-- DROPMENU -->
+		<header>
+			<div class="row">
+				<div class="columnnav">
+					<div class="dropdown">
+						<button class="dropbtn">Menu</button>
+						<div class="dropdown-content">
+							<a href="../index.html">Home</a>
+							<a href="topic1.html">Topic 1</a>
+							<a href="topic2.html">Topic 2</a>
+							<a href="topic3.html">Topic 3</a>
+							<a href="topic4.html">Topic 4</a>
+							<a href="topic5.html">Topic 5</a>
+							<a href="topic6.html">Topic 6</a>
+							<a href="topic7.html">Topic 7</a>
+							<a href="topic8.html">Topic 8</a>
+							<a href="topic9.html">Topic 9</a>
+							<a href="topic10.html">Topic 10</a>
+							<a href="topic11.html">Topic 11</a>
+							<a href="topic12.html">Topic 12</a>
+							<a href="topic13.html">Topic 13</a>
+						</div>
+					</div>
+				</div>
+				<div class="columnnav">
+					<h1>Topic 5 - <i>Local Storage API</i></h1>
+				</div>
+			</div>
+		</header>
+		
+<!-- INDEX -->
+		<main>
+			<div>
+				<h3>INDEX</h3>
+				<ol>
+					<li><a href="#ONE">Local Storage API</a>
+				</ol>
+			</div><hr>
+
+<!-- TOPICS -->
+<!-- EXAMPLE 1 -->
+			<div>
+				<table><a id="ONE"></a>
+					<tbody>
+						<tr>
+							<td class="TDnumber" rowspan="3">1</td>
+							<tr>
+								<td class="TDdef" colspan="2">
+									<b><i>Local Storage API</i></b> : Creates an internal storage place of information within the webpage, typically base on the user prompts and input. Common uses are for cases in which the user needs to type in any kind of information that will be applied to a purpose in the website. (Comments, FAQ submissions, posts, input windows, etc.)<hr class="red"></td>
+								<td class="TDcode" rowspan="3"><hr class="red"><h1><b>JAVASCRIPT CODE</b></h1><hr class="red"><br>
+									var user;
+									var ad;
+
+									function customerInfo(fname,lname,email,phone) {
+										var user = {"firstname":fname,"lastname":lname,"emailaddress":email,"phonenumber":phone};
+										var myJSON = JSON.stringify(user);
+										storeCustomerInfo(myJSON);
+										retrieveCustomerInfo();
+									}
+										
+									function storeCustomerInfo(myJSON) {
+										localStorage.setItem("testJSON", myJSON);
+									}
+
+									function retrieveCustomerInfo() {
+										text = localStorage.getItem("testJSON");
+										customerData = JSON.parse(text);
+										document.getElementById("pID1").innerHTML = 
+												customerData.firstname + " " + customerData.lastname + "<br>" +
+												customerData.phonenumber + "<br>" +
+												customerData.emailaddress;
+									}</td>
+																
+							</tr>
+							<tr>
+								<td class="TDjs">
+								<fieldset>
+									<p>What's your first name?</p>
+										<input type="text" name="firstname" id="firstname">
+									<p>What's your last name?</p>
+										<input type="text" name="lastname" id="lastname">
+									<p>Contact Phone Number:</p>
+										<input type="text" name="phone" id="phonenumber">
+									<p>Contact Email: </p>
+										<input type="text" name="contactEmail" id="contactEmail">
+									<button type="button" Id ="button1" class ="button1" onclick="customerInfo(
+										document.getElementById('firstname').value, document.getElementById('lastname').value, document.getElementById('contactEmail').value, document.getElementById('phonenumber').value)">Submit</button>
+								</fieldset>
+								<p id="pID1"></p></td>
+								<td>This asks for the user's information, and stores each within the webpage, and used in the JavaScript code to confirm the information that was submitted.</td>
+							</tr>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+		</main>
+<!-- END OF THE LINE -->
+	<footer>
+        <p>&copy;2019 David Olsen - CIT261 - <a href="http://www.byui.edu/online">BYU-Idaho Online</a><br>
+	</footer>
+		<script src="../script/topic5js.js"></script>
+		<script src="../script/dropmenu.js"></script>
+	</body>
+</html>

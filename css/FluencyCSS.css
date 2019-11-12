@@ -216,9 +216,6 @@ button:hover {
 
 
 
-
-
-
 /* NAVIGATION BAR LOCKED TO TOP */
 .navbar { background-color: white; position: fixed; top: 0; z-index: 1;}
 

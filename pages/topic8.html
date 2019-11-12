@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>CIT 261 | Topic 8</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="../css/FluencyCSS.css" type="text/css" />
+	</head>
+	<body>
+<!-- DROPMENU -->
+		<header>
+			<div class="row">
+				<div class="columnnav">
+					<div class="dropdown">
+						<button class="dropbtn">Menu</button>
+						<div class="dropdown-content">
+							<a href="../index.html">Home</a>
+							<a href="topic1.html">Topic 1</a>
+							<a href="topic2.html">Topic 2</a>
+							<a href="topic3.html">Topic 3</a>
+							<a href="topic4.html">Topic 4</a>
+							<a href="topic5.html">Topic 5</a>
+							<a href="topic6.html">Topic 6</a>
+							<a href="topic7.html">Topic 7</a>
+							<a href="topic8.html">Topic 8</a>
+							<a href="topic9.html">Topic 9</a>
+							<a href="topic10.html">Topic 10</a>
+							<a href="topic11.html">Topic 11</a>
+							<a href="topic12.html">Topic 12</a>
+							<a href="topic13.html">Topic 13</a>
+						</div>
+					</div>
+				</div>
+				<div class="columnnav">
+					<h1>Topic 8 - <i>Trigger CSS3 Animation with JS</i></h1>
+				</div>
+			</div>
+		</header>
+		
+<!-- INDEX -->
+		<main>
+			<div>
+				<h3>INDEX</h3>
+				<ol>
+					<li><a href="#ONE">Trigger CSS3 Animation with JS</a></li>
+				</ol>
+			</div><hr>
+			
+<!-- EXAMPLE 1 -->
+			<div>
+				<table><a id="ONE"></a>
+					<tbody>
+					<tr>
+						<td class="TDnumber" rowspan="3">1</td>
+						<tr>
+							<td class="TDdef" colspan="2"><b><i>Trigger CSS3 Animation with JS</i></b> : Like in the Topic 7 example, this manipulates the property values of CSS through JavaScript. But in this case, it triggers an animation/transition sequence.<hr class="red"></td>
+							<td class="TDcode" rowspan="3"><hr class="red"><h1><b>CSS CODE</b></h1><hr class="red"><br>
+								document.getElementById("animateTDjs").style.color = "red";
+
+								function makeSmaller() {
+									document.getElementById("animateTDjs").style.WebkitTransition = "all 2s";
+									document.getElementById("animateTDjs").style.transition = "font-size 4s";
+									document.getElementById("animateTDjs").style.fontSize = "20%";
+								}
+								function makeBigger() {
+									document.getElementById("animateTDjs").style.WebkitTransition = "all 2s";
+									document.getElementById("animateTDjs").style.transition = "font-size 4s";
+									document.getElementById("animateTDjs").style.fontSize = "150%";
+								}
+								function makeNormal() {
+									document.getElementById("animateTDjs").style.WebkitTransition = "all 2s";
+									document.getElementById("animateTDjs").style.transition = "font-size 4s";
+									document.getElementById("animateTDjs").style.fontSize = "85%"; 
+								}
+								function changeFont() {
+									document.getElementById("animateTDjs").style.fontFamily = "Times New Roman";
+								}
+								function changeFontBack() {
+									document.getElementById("animateTDjs").style.fontFamily = "Agency FB, serif";
+								}</td>
+						</tr>
+						<tr>
+							<td class="TDjs">
+								<button onclick="makeSmaller()">Make Smaller</button>
+								<button onclick="makeBigger()">Make Bigger</button>
+								<button onclick="makeNormal()">Return to Normal</button><hr>
+								<h1 id="animateTDjs">THIS RED TEXT IS ANIMATED</h1>
+							</td>
+							<td>The red text is animated, which is controlled by the two buttons provided.<br>Also, these two buttons below can change the font.
+								<button onclick="changeFont()">Times New Roman</button>
+								<button onclick="changeFontBack()">Revert</button></td>
+						</tr>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</main>
+<!-- END OF THE LINE -->
+	<footer>
+        <p>&copy;2019 David Olsen - CIT261 - <a href="http://www.byui.edu/online">BYU-Idaho Online</a></p>
+	</footer>
+		<script src="../script/topic8js.js"></script>
+		<script src="../script/dropmenu.js"></script>
+	</body>
+</html>
