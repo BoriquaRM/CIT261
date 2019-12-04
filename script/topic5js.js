@@ -1,5 +1,4 @@
 var user;
-var ad;
 
 function customerInfo(fname,lname,email,phone) {
     var user = {"firstname":fname,"lastname":lname,"emailaddress":email,"phonenumber":phone};
