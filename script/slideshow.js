@@ -1,14 +1,15 @@
-var myIndex = 0;
-carousel();
+var slides = 0;
+slideshow();
 
-function carousel() {
-	var i;
+function slideshow() {
+	var y;
 	var x = document.getElementsByClassName("mySlides");
-	for (i = 0; i < x.length; i++) {
-	x[i].style.display = "none";  
+	for (y = 0; y < x.length; y++) {
+		x[y].style.display = "none";  
 	}
-	myIndex++;
-	if (myIndex > x.length) {myIndex = 1}    
-	x[myIndex-1].style.display = "block";  
-	setTimeout(carousel, 9000);    
+	slides++;
+	if (slides > x.length) 
+	{slides = 1}    
+	x[slides-1].style.display = "block";  
+	setTimeout(slideshow, 9000);    
 }
